@@ -34,10 +34,11 @@ public class EmpleadoEntity implements Serializable{
     @Column(name = "apellido_empleado", nullable = false)
     private String apellido;
     
-//    @ManyToOne
-//    @JoinColumn (name = "id_usuario")
-//    private UsuarioEntity usuario;
-//    
+    
+    @ManyToOne
+    @JoinColumn (name = "id_usuario")
+    private UsuarioEntity usuario;
+    
 //    @ManyToOne
 //    @JoinColumn (name = "id_cadena_hotelera")
 //    private Cadena_hotelera cadena_hotelera;
@@ -66,13 +67,13 @@ public class EmpleadoEntity implements Serializable{
         this.apellido = apellido;
     }
 
-//    public UsuarioEntity getUsuario() {
-//        return usuario;
-//    }
-//
-//    public void setUsuario(UsuarioEntity usuario) {
-//        this.usuario = usuario;
-//    }
+    public UsuarioEntity getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
+    }
 //
 //    public Cadena_hotelera getCadena_hotelera() {
 //        return cadena_hotelera;
