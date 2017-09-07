@@ -11,23 +11,29 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  *
  * @author brend
  */
 @Entity
-public class PagoEntity  implements Serializable{
+public class PagoDebitoEntity implements Serializable{
     
-    private static final long serialVersionUID = 1L;
+     private static final long serialVersionUID = 1L;
     
     @Id
-    @Column(name="id_pago")
+    @Column(name="num_cuenta")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     
-    @Column(name = "tipo_pago")
-    private String tipo_pago;
+    @Column(name = "nombre_banco", nullable = false)
+    private String nombre_banco;
+     
+    @ManyToOne
+    @JoinColumn (name = "tipo_pago")
+    private PagoEntity tipo_pago;
 
     public Long getId() {
         return id;
@@ -37,13 +43,22 @@ public class PagoEntity  implements Serializable{
         this.id = id;
     }
 
-    public String getTipo_pago() {
+    public String getNombre_banco() {
+        return nombre_banco;
+    }
+
+    public void setNombre_banco(String nombre_banco) {
+        this.nombre_banco = nombre_banco;
+    }
+
+    public PagoEntity getTipo_pago() {
         return tipo_pago;
     }
 
-    public void setTipo_pago(String tipo_pago) {
+    public void setTipo_pago(PagoEntity tipo_pago) {
         this.tipo_pago = tipo_pago;
     }
+
     
     
 }
