@@ -17,11 +17,12 @@ import javax.persistence.ManyToOne;
  *
  * @author Carlos
  */
-
+@Entity
 public class ClienteOpinarHotelEntity implements Serializable{
     private static final long serialVersionUID = 1L;
-    @JoinColumn
+    @Id
     @Column(name = "id_opinion")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
     @ManyToOne
