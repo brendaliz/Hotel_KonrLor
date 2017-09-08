@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.konrad.hotel_konrlor.entities;
+package co.konrad.hotel_konlor.entities;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -24,7 +24,7 @@ import javax.persistence.TemporalType;
  * @author brend
  */
 @Entity
-public class PagoCreditoEntity implements Serializable{
+public class Pago_credito implements Serializable{
     
     private static final long serialVersionUID = 1L;
     
@@ -41,7 +41,7 @@ public class PagoCreditoEntity implements Serializable{
     
     @ManyToOne
     @JoinColumn (name = "tipo_pago")
-    private PagoEntity tipo_pago;
+    private UsuarioEntity tipo_pago;
     
     private int cod_clave;
 
@@ -69,11 +69,11 @@ public class PagoCreditoEntity implements Serializable{
         this.fechaVencimiento = fechaVencimiento;
     }
 
-    public PagoEntity getTipo_pago() {
+    public UsuarioEntity getTipo_pago() {
         return tipo_pago;
     }
 
-    public void setTipo_pago(PagoEntity tipo_pago) {
+    public void setTipo_pago(UsuarioEntity tipo_pago) {
         this.tipo_pago = tipo_pago;
     }
 
@@ -84,6 +84,7 @@ public class PagoCreditoEntity implements Serializable{
     public void setCod_clave(int cod_clave) {
         this.cod_clave = cod_clave;
     }
-
+    
+    
     
 }

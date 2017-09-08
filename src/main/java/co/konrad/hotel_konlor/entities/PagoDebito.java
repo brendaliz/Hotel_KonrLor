@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.konrad.hotel_konrlor.entities;
+package co.konrad.hotel_konlor.entities;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -19,7 +19,7 @@ import javax.persistence.ManyToOne;
  * @author brend
  */
 @Entity
-public class PagoDebitoEntity implements Serializable{
+public class PagoDebito implements Serializable{
     
      private static final long serialVersionUID = 1L;
     
@@ -33,7 +33,7 @@ public class PagoDebitoEntity implements Serializable{
      
     @ManyToOne
     @JoinColumn (name = "tipo_pago")
-    private PagoEntity tipo_pago;
+    private UsuarioEntity tipo_pago;
 
     public Long getId() {
         return id;
@@ -51,14 +51,16 @@ public class PagoDebitoEntity implements Serializable{
         this.nombre_banco = nombre_banco;
     }
 
-    public PagoEntity getTipo_pago() {
+    public UsuarioEntity getTipo_pago() {
         return tipo_pago;
     }
 
-    public void setTipo_pago(PagoEntity tipo_pago) {
+    public void setTipo_pago(UsuarioEntity tipo_pago) {
         this.tipo_pago = tipo_pago;
     }
-
+    
+    
+    
     
     
 }
