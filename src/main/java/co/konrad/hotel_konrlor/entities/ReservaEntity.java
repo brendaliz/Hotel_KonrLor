@@ -39,9 +39,9 @@ public class ReservaEntity implements Serializable{
     
     private int valor_reserva;
     
-//    @ManyToOne
-//    @JoinColumn (name = "id_hotel")
-//    private HotelEntity hotel;
+    @ManyToOne
+    @JoinColumn (name = "id_hotel")
+    private HotelEntity hotel;
     
     @ManyToOne
     @JoinColumn (name = "id_empleado")
@@ -101,6 +101,22 @@ public class ReservaEntity implements Serializable{
 
     public void setTipo_pago(PagoEntity tipo_pago) {
         this.tipo_pago = tipo_pago;
+    }
+
+    public HotelEntity getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(HotelEntity hotel) {
+        this.hotel = hotel;
+    }
+
+    public ClienteEntity getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ClienteEntity cliente) {
+        this.cliente = cliente;
     }
     
     

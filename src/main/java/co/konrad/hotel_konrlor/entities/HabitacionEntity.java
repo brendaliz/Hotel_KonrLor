@@ -23,26 +23,34 @@ import javax.persistence.TemporalType;
 
 @Entity
 public class HabitacionEntity implements Serializable{
-    private static final long serialVersionUID = 1L;    
+    
+    private static final long serialVersionUID = 1L; 
+    
     @Id
     @Column(name="id_Habitacion")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long tipo_Habitacion;
     
-    @Column(name="galeria_hotel")
-    private int galeria_hotel;
+    private String galeria;
+    
     @ManyToOne
     @JoinColumn(name = "id_hotel")
     private HotelEntity hotel;
 
-
-
-    public int getGaleria_hotel() {
-        return galeria_hotel;
+    public long getTipo_Habitacion() {
+        return tipo_Habitacion;
     }
 
-    public void setGaleria_hotel(int galeria_hotel) {
-        this.galeria_hotel = galeria_hotel;
+    public void setTipo_Habitacion(long tipo_Habitacion) {
+        this.tipo_Habitacion = tipo_Habitacion;
+    }
+
+    public String getGaleria() {
+        return galeria;
+    }
+
+    public void setGaleria(String galeria) {
+        this.galeria = galeria;
     }
 
     public HotelEntity getHotel() {
@@ -53,13 +61,6 @@ public class HabitacionEntity implements Serializable{
         this.hotel = hotel;
     }
 
-    public long getTipo_Habitacion() {
-        return tipo_Habitacion;
-    }
-
-    public void setTipo_Habitacion(long tipo_Habitacion) {
-        this.tipo_Habitacion = tipo_Habitacion;
-    }
 
 
 }

@@ -19,7 +19,9 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class CadenaHoteleraEntity implements Serializable{
+    
     private static final long serialVersionUID = 1L;
+    
     @Id
     @Column(name = "id_cadena_hotelera")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -14,7 +14,9 @@ import javax.persistence.Id;
 
 @Entity
 public class ProveedorEntity implements Serializable{
+    
     private static final long serialVersionUID = 1L;
+    
     @Id
     @Column(name = "id_proveedor")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

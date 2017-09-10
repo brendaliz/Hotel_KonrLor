@@ -19,25 +19,28 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 public class ClienteOpinarHotelEntity implements Serializable{
+    
     private static final long serialVersionUID = 1L;
+    
     @Id
     @Column(name = "id_opinion")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    @ManyToOne
-    @JoinColumn(name = "numero_documento_cliente")            
-    private ClienteEntity cliente;
-    
-    @ManyToOne
-    @JoinColumn(name = "id_hotel")
-    private HotelEntity Hotel;
-    
+     
     @Column(name = "comentario_opinion")
     private String comentario;
     
     @Column(name = "valoracion")
     private int valoracion;
+    
+    @ManyToOne
+    @JoinColumn (name = "id_cliente")
+    private ClienteEntity cliente;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_hotel")
+    private HotelEntity hotel;
 
     public Long getId() {
         return id;
@@ -45,22 +48,6 @@ public class ClienteOpinarHotelEntity implements Serializable{
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public ClienteEntity getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(ClienteEntity cliente) {
-        this.cliente = cliente;
-    }
-
-    public HotelEntity getHotel() {
-        return Hotel;
-    }
-
-    public void setHotel(HotelEntity Hotel) {
-        this.Hotel = Hotel;
     }
 
     public String getComentario() {
@@ -78,6 +65,23 @@ public class ClienteOpinarHotelEntity implements Serializable{
     public void setValoracion(int valoracion) {
         this.valoracion = valoracion;
     }
-    
-    
+
+    public ClienteEntity getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(ClienteEntity cliente) {
+        this.cliente = cliente;
+    }
+
+    public HotelEntity getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(HotelEntity hotel) {
+        this.hotel = hotel;
+    }
+   
+
+   
 }

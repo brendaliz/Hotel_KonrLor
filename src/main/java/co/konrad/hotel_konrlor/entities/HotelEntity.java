@@ -53,7 +53,7 @@ public class HotelEntity implements Serializable{
     private boolean disponibilidad;
     
     @ManyToOne
-    @JoinColumn(name = "nit_cadena_Hotelera")
+    @JoinColumn(name = "id_cadena_Hotelera")
     private CadenaHoteleraEntity cadenaHotelera;
 
     public long getId_hotel() {

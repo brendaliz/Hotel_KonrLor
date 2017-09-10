@@ -39,9 +39,9 @@ public class EmpleadoEntity implements Serializable{
     @JoinColumn (name = "id_usuario")
     private UsuarioEntity usuario;
     
-//    @ManyToOne
-//    @JoinColumn (name = "id_cadena_hotelera")
-//    private Cadena_hotelera cadena_hotelera;
+    @ManyToOne
+    @JoinColumn (name = "id_cadena_hotelera")
+    private CadenaHoteleraEntity cadena_hotelera;
 
     public Long getId() {
         return id;
@@ -74,16 +74,16 @@ public class EmpleadoEntity implements Serializable{
     public void setUsuario(UsuarioEntity usuario) {
         this.usuario = usuario;
     }
-//
-//    public Cadena_hotelera getCadena_hotelera() {
-//        return cadena_hotelera;
-//    }
-//
-//    public void setCadena_hotelera(Cadena_hotelera cadena_hotelera) {
-//        this.cadena_hotelera = cadena_hotelera;
-//    }
-//    
-//    
+
+    public CadenaHoteleraEntity getCadena_hotelera() {
+        return cadena_hotelera;
+    }
+
+    public void setCadena_hotelera(CadenaHoteleraEntity cadena_hotelera) {
+        this.cadena_hotelera = cadena_hotelera;
+    }
+
+    
     
     
     
