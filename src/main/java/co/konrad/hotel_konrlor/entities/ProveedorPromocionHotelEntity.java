@@ -21,11 +21,11 @@ import javax.persistence.ManyToOne;
 @Entity
 public class ProveedorPromocionHotelEntity implements Serializable{
     private static final long serialVersionUID = 1L;
-    
+    @Id
     @ManyToOne
     @JoinColumn(name = "id_proveedor")
     private ProveedorEntity proveedor;
-    
+    @Id
     @ManyToOne
     @JoinColumn(name = "id_hotel")
     private HotelEntity hotel;
