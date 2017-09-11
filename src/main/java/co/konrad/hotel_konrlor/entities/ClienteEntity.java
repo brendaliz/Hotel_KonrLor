@@ -35,17 +35,26 @@ public class ClienteEntity implements Serializable{
     @Column(name = "apellido_cliente", nullable = false)
     private String apellido;
     
+    @Column (name = "documento")
     private int documento;
     
     @Column (name = "direccion_cliente")
     private String direccion;
     
     @Temporal(TemporalType.DATE)
+    @Column (name = "fecha_nacimiento")
     private Date fechaNacimiento;
     
+    @Column (name = "fecha_nacimiento")
     private String pais;
+    
+    @Column (name = "ciudad")
     private String ciudad;
+    
+    @Column (name = "telefono")
     private int telefono;
+    
+    @Column (name = "celular")
     private int celular;
     
     @ManyToOne

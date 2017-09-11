@@ -32,8 +32,13 @@ public class UsuarioEntity implements Serializable{
     @Column(name = "apellido_usuario", nullable = false)
     private String apellido;
     
+    @Column (name = "contraseña")
     private String contraseña;
+    
+    @Column (name = "avatar")
     private double avatar;
+    
+    @Column (name = "correo")
     private String correo;
 
     public Long getId() {

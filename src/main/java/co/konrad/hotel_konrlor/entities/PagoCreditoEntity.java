@@ -37,12 +37,14 @@ public class PagoCreditoEntity implements Serializable{
     private String nombre_franquicia;
     
     @Temporal(TemporalType.DATE)
+    @Column(name = "fecha_vencimiento")
     private Date fechaVencimiento;
     
     @ManyToOne
     @JoinColumn (name = "tipo_pago")
     private PagoEntity tipo_pago;
     
+    @Column(name = "cod_clave")
     private int cod_clave;
 
     public Long getId() {

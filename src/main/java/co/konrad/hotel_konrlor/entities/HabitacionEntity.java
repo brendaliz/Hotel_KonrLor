@@ -31,6 +31,7 @@ public class HabitacionEntity implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long tipo_Habitacion;
     
+    @Column (name = "galeria")
     private String galeria;
     
     @ManyToOne
