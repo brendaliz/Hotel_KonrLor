@@ -25,18 +25,18 @@ public class TipoAcomodacionEntity implements Serializable{
     @Id
     @Column(name="id_tipo_acomodacion")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_tipo_acomodacion;
     
     @ManyToOne
     @JoinColumn(name = "tipo_Habitacion")
     private HabitacionEntity habitacion;
 
-    public Long getId() {
-        return id;
+    public Long getId_tipo_acomodacion() {
+        return id_tipo_acomodacion;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId_tipo_acomodacion(Long id_tipo_acomodacion) {
+        this.id_tipo_acomodacion = id_tipo_acomodacion;
     }
 
     public HabitacionEntity getHabitacion() {

@@ -24,7 +24,7 @@ public class UsuarioEntity implements Serializable{
     @Id
     @Column(name="id_usuario")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id_usuario;
     
     @Column(name = "nombre_usuario", nullable = false)
     private String nombre;
@@ -41,12 +41,12 @@ public class UsuarioEntity implements Serializable{
     @Column (name = "correo")
     private String correo;
 
-    public Long getId() {
-        return id;
+    public Long getId_usuario() {
+        return id_usuario;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId_usuario(Long id_usuario) {
+        this.id_usuario = id_usuario;
     }
 
     public String getNombre() {

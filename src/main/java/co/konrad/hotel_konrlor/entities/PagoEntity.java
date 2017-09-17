@@ -24,17 +24,17 @@ public class PagoEntity  implements Serializable{
     @Id
     @Column(name="id_pago")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id_pago;
     
     @Column(name = "tipo_pago")
     private String tipo_pago;
 
-    public Long getId() {
-        return id;
+    public Long getId_pago() {
+        return id_pago;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId_pago(Long id_pago) {
+        this.id_pago = id_pago;
     }
 
     public String getTipo_pago() {

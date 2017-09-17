@@ -19,16 +19,30 @@ import javax.persistence.ManyToOne;
  * @author Carlos
  */
 @Entity
-public class ProveedorPromocionHotelEntity implements Serializable{
+public class ProveedorPromocionHotelEntity implements Serializable {
+ 
     private static final long serialVersionUID = 1L;
+    
     @Id
+    @Column(name="id_p_Promocion_hotel")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id_p_Promocion_hotel;
+    
     @ManyToOne
     @JoinColumn(name = "id_proveedor")
     private ProveedorEntity proveedor;
-    @Id
+
     @ManyToOne
     @JoinColumn(name = "id_hotel")
-    private HotelEntity hotel;
+    private HotelEntity id_hotel;
+
+    public Long getId_p_Promocion_hotel() {
+        return id_p_Promocion_hotel;
+    }
+
+    public void setId_p_Promocion_hotel(Long id_p_Promocion_hotel) {
+        this.id_p_Promocion_hotel = id_p_Promocion_hotel;
+    }
 
     public ProveedorEntity getProveedor() {
         return proveedor;
@@ -38,12 +52,14 @@ public class ProveedorPromocionHotelEntity implements Serializable{
         this.proveedor = proveedor;
     }
 
-    public HotelEntity getHotel() {
-        return hotel;
+    public HotelEntity getId_hotel() {
+        return id_hotel;
     }
 
-    public void setHotel(HotelEntity hotel) {
-        this.hotel = hotel;
+    public void setId_hotel(HotelEntity id_hotel) {
+        this.id_hotel = id_hotel;
     }
     
+    
+
 }

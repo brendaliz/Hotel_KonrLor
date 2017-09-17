@@ -17,10 +17,12 @@ import javax.persistence.Query;
  */
 @Stateless
 public class ClienteOpinarHotelPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
     protected EntityManager em;
-    public ClienteOpinarHotelEntity find(Long id){
-        return em.find(ClienteOpinarHotelEntity.class, id);
+    
+    public ClienteOpinarHotelEntity find(Long id_opinion){
+        return em.find(ClienteOpinarHotelEntity.class, id_opinion);
     }
     
     public List<ClienteOpinarHotelEntity> findAll() {

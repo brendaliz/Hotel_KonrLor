@@ -18,8 +18,10 @@ import javax.persistence.Query;
  */
 @Stateless
 public class HotelPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
     protected EntityManager em;
+    
     public HotelEntity find(Long id_Hotel){
         return em.find(HotelEntity.class, id_Hotel);
     }

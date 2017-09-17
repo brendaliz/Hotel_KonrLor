@@ -31,7 +31,7 @@ public class PagoCreditoEntity implements Serializable{
     @Id
     @Column(name="num_tarjeta")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id_num_tarjeta;
     
     @Column(name = "nombre_franquicia", nullable = false)
     private String nombre_franquicia;
@@ -47,12 +47,12 @@ public class PagoCreditoEntity implements Serializable{
     @Column(name = "cod_clave")
     private int cod_clave;
 
-    public Long getId() {
-        return id;
+    public Long getId_num_tarjeta() {
+        return id_num_tarjeta;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId_num_tarjeta(Long id_num_tarjeta) {
+        this.id_num_tarjeta = id_num_tarjeta;
     }
 
     public String getNombre_franquicia() {

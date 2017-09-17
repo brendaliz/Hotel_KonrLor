@@ -17,8 +17,10 @@ import javax.persistence.Query;
  */
 @Stateless
 public class CadenaHoteleraPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
     protected EntityManager em;
+    
     public CadenaHoteleraEntity find(Long id_Cadena_Hotelera){
         return em.find(CadenaHoteleraEntity.class, id_Cadena_Hotelera);
     }

@@ -18,10 +18,12 @@ import javax.persistence.Query;
  */
 @Stateful
 public class TipoAcomodacionPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
     protected EntityManager em;
-    public TipoAcomodacionEntity find(Long id){
-        return em.find(TipoAcomodacionEntity.class, id);
+    
+    public TipoAcomodacionEntity find(Long id_tipo_acomodacion){
+        return em.find(TipoAcomodacionEntity.class, id_tipo_acomodacion);
     }
     
     public List<TipoAcomodacionEntity> findAll() {

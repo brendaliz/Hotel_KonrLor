@@ -17,10 +17,12 @@ import javax.persistence.Query;
  */
 @Stateless
 public class PagoPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
     protected EntityManager em;
-    public PagoEntity find(String tipoPago){
-        return em.find(PagoEntity.class, tipoPago);
+    
+    public PagoEntity find(Long id_pago){
+        return em.find(PagoEntity.class, id_pago);
     }
     
     public List<PagoEntity> findAll() {
