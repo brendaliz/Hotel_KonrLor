@@ -17,27 +17,29 @@ import javax.persistence.Query;
  */
 @Stateless
 public class ProveedorPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-    protected EntityManager em;
+    protected EntityManager emProveedor;
+    
     public ProveedorEntity find(Long id_proveedor){
-        return em.find(ProveedorEntity.class, id_proveedor);
+        return emProveedor.find(ProveedorEntity.class, id_proveedor);
     }
     
     public List<ProveedorEntity> findAll() {
-        Query q = em.createQuery("select p from ProveedorEntity p");
+        Query q = emProveedor.createQuery("select p from ProveedorEntity p");
         return q.getResultList();
     }
     
-    public ProveedorEntity create(ProveedorEntity entity) {
-        em.persist(entity);
-        return entity;
+    public ProveedorEntity create(ProveedorEntity proveedor) {
+        emProveedor.persist(proveedor);
+        return proveedor;
     }
     
-    public ProveedorEntity update(ProveedorEntity entity) {
-        return em.merge(entity);
+    public ProveedorEntity update(ProveedorEntity proveedor) {
+        return emProveedor.merge(proveedor);
     }
     public void delete(Long id_proveedor) {
-        ProveedorEntity entity = em.find(ProveedorEntity.class, id_proveedor);
-        em.remove(entity);
+        ProveedorEntity proveedorEntity = emProveedor.find(ProveedorEntity.class, id_proveedor);
+        emProveedor.remove(proveedorEntity);
     }    
 }

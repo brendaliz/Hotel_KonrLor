@@ -26,7 +26,7 @@ public class PagoDebitoEntity implements Serializable{
     @Id
     @Column(name="num_cuenta")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id_num_cuenta;
     
     @Column(name = "nombre_banco", nullable = false)
     private String nombre_banco;
@@ -35,12 +35,12 @@ public class PagoDebitoEntity implements Serializable{
     @JoinColumn (name = "tipo_pago")
     private PagoEntity tipo_pago;
 
-    public Long getId() {
-        return id;
+    public Long getId_num_cuenta() {
+        return id_num_cuenta;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId_num_cuenta(Long id_num_cuenta) {
+        this.id_num_cuenta = id_num_cuenta;
     }
 
     public String getNombre_banco() {

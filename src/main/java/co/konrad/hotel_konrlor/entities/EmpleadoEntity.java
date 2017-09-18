@@ -26,7 +26,7 @@ public class EmpleadoEntity implements Serializable{
     @Id
     @Column(name="id_empleado")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id_empleado;
     
     @Column(name = "nombre_empleado", nullable = false)
     private String nombre;
@@ -43,12 +43,12 @@ public class EmpleadoEntity implements Serializable{
     @JoinColumn (name = "id_cadena_hotelera")
     private CadenaHoteleraEntity cadena_hotelera;
 
-    public Long getId() {
-        return id;
+    public Long getId_empleado() {
+        return id_empleado;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId_empleado(Long id_empleado) {
+        this.id_empleado = id_empleado;
     }
 
     public String getNombre() {

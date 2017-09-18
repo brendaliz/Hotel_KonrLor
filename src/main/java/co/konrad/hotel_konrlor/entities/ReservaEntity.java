@@ -29,7 +29,7 @@ public class ReservaEntity implements Serializable{
     @Id
     @Column(name="id_reserva")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id_reserva;
     
     @Temporal(TemporalType.DATE)
     @Column(name = "fecha_entrada")
@@ -57,12 +57,12 @@ public class ReservaEntity implements Serializable{
     @JoinColumn (name = "tipo_pago")
     private PagoEntity tipo_pago;
 
-    public Long getId() {
-        return id;
+    public Long getId_reserva() {
+        return id_reserva;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId_reserva(Long id_reserva) {
+        this.id_reserva = id_reserva;
     }
 
     public Date getFechaEntrada() {

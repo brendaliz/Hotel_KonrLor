@@ -17,27 +17,29 @@ import javax.persistence.Query;
  */
 @Stateless
 public class PagoCreditoPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-    protected EntityManager em;
-    public PagoCreditoEntity find(Long num_Tarjeta){
-        return em.find(PagoCreditoEntity.class, num_Tarjeta);
+    protected EntityManager emPagoCredito;
+    
+    public PagoCreditoEntity find(Long id_num_tarjeta){
+        return emPagoCredito.find(PagoCreditoEntity.class, id_num_tarjeta);
     }
     
     public List<PagoCreditoEntity> findAll() {
-        Query q = em.createQuery("select p from PagoCreditoEntity p");
+        Query q = emPagoCredito.createQuery("select p from PagoCreditoEntity p");
         return q.getResultList();
     }
     
-    public PagoCreditoEntity create(PagoCreditoEntity entity) {
-        em.persist(entity);
-        return entity;
+    public PagoCreditoEntity create(PagoCreditoEntity pagoCredito) {
+        emPagoCredito.persist(pagoCredito);
+        return pagoCredito;
     }
     
-    public PagoCreditoEntity update(PagoCreditoEntity entity) {
-        return em.merge(entity);
+    public PagoCreditoEntity update(PagoCreditoEntity pagoCredito) {
+        return emPagoCredito.merge(pagoCredito);
     }
-    public void delete(Long num_Tarjeta) {
-        PagoCreditoEntity entity = em.find(PagoCreditoEntity.class, num_Tarjeta);
-        em.remove(entity);
+    public void delete(Long id_num_tarjeta) {
+        PagoCreditoEntity pagoCreditoEliminar = emPagoCredito.find(PagoCreditoEntity.class, id_num_tarjeta);
+        emPagoCredito.remove(pagoCreditoEliminar);
     }    
 }

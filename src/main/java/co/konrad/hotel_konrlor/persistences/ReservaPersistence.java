@@ -17,27 +17,29 @@ import javax.persistence.Query;
  */
 @Stateless
 public class ReservaPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-    protected EntityManager em;
-    public ReservaEntity find(Long id_Reserva){
-        return em.find(ReservaEntity.class, id_Reserva);
+    protected EntityManager emReserva;
+    
+    public ReservaEntity find(Long id_reserva){
+        return emReserva.find(ReservaEntity.class, id_reserva);
     }
     
     public List<ReservaEntity> findAll() {
-        Query q = em.createQuery("select r from ReservaEntity r");
+        Query q = emReserva.createQuery("select r from ReservaEntity r");
         return q.getResultList();
     }
     
-    public ReservaEntity create(ReservaEntity entity) {
-        em.persist(entity);
-        return entity;
+    public ReservaEntity create(ReservaEntity reserva) {
+        emReserva.persist(reserva);
+        return reserva;
     }
     
-    public ReservaEntity update(ReservaEntity entity) {
-        return em.merge(entity);
+    public ReservaEntity update(ReservaEntity reserva) {
+        return emReserva.merge(reserva);
     }
     public void delete(Long id_Reserva) {
-        ReservaEntity entity = em.find(ReservaEntity.class, id_Reserva);
-        em.remove(entity);
+        ReservaEntity reservaEliminar = emReserva.find(ReservaEntity.class, id_Reserva);
+        emReserva.remove(reservaEliminar);
     }    
 }

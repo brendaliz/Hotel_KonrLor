@@ -19,27 +19,29 @@ import javax.persistence.Query;
 
 @Stateless
     public class ClientePersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-    protected EntityManager em;
-    public ClienteEntity find(Long id_usuario){
-        return em.find(ClienteEntity.class, id_usuario);
+    protected EntityManager emCliente;
+    
+    public ClienteEntity find(Long id_cliente){
+        return emCliente.find(ClienteEntity.class, id_cliente);
     }
     
     public List<ClienteEntity> findAll() {
-        Query q = em.createQuery("select c from ClienteEntity c");
+        Query q = emCliente.createQuery("select c from ClienteEntity c");
         return q.getResultList();
     }
     
-    public ClienteEntity create(ClienteEntity entity) {
-        em.persist(entity);
-        return entity;
+    public ClienteEntity create(ClienteEntity cliente) {
+        emCliente.persist(cliente);
+        return cliente;
     }
     
-    public ClienteEntity update(ClienteEntity entity) {
-        return em.merge(entity);
+    public ClienteEntity update(ClienteEntity cliente) {
+        return emCliente.merge(cliente);
     }
-    public void delete(Long id_usuario) {
-        ClienteEntity entity = em.find(ClienteEntity.class, id_usuario);
-        em.remove(entity);
+    public void delete(Long id_cliente) {
+        ClienteEntity clienteElminar = emCliente.find(ClienteEntity.class, id_cliente);
+        emCliente.remove(clienteElminar);
     }    
 }

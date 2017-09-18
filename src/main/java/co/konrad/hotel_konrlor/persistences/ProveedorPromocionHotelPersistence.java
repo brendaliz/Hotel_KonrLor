@@ -18,27 +18,29 @@ import javax.persistence.Query;
  */
 @Stateless
 public class ProveedorPromocionHotelPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-    protected EntityManager em;
-    public ProveedorPromocionHotelEntity find(Long id_proveedor/*,Long id_hotel*/){
-        return em.find(ProveedorPromocionHotelEntity.class, id_proveedor);
+    protected EntityManager emPromocion;
+    
+    public ProveedorPromocionHotelEntity find(Long id_p_Promocion_hotel){
+        return emPromocion.find(ProveedorPromocionHotelEntity.class, id_p_Promocion_hotel);
     }
     
     public List<ProveedorPromocionHotelEntity> findAll() {
-        Query q = em.createQuery("select p from ProveedorPromocionHotelEntity p");
+        Query q = emPromocion.createQuery("select p from ProveedorPromocionHotelEntity p");
         return q.getResultList();
     }
     
-    public ProveedorPromocionHotelEntity create(ProveedorPromocionHotelEntity entity) {
-        em.persist(entity);
-        return entity;
+    public ProveedorPromocionHotelEntity create(ProveedorPromocionHotelEntity promocion) {
+        emPromocion.persist(promocion);
+        return promocion;
     }
     
-    public ProveedorPromocionHotelEntity update(ProveedorPromocionHotelEntity entity) {
-        return em.merge(entity);
+    public ProveedorPromocionHotelEntity update(ProveedorPromocionHotelEntity promocion) {
+        return emPromocion.merge(promocion);
     }
-    public void delete(Long id_proveedor/*,Long id_hotel*/) {
-        ProveedorPromocionHotelEntity entity = em.find(ProveedorPromocionHotelEntity.class, id_proveedor/*,id_hotel*/);
-        em.remove(entity);
+    public void delete(Long id_p_Promocion_hotel) {
+        ProveedorPromocionHotelEntity promocionEliminar = emPromocion.find(ProveedorPromocionHotelEntity.class, id_p_Promocion_hotel);
+        emPromocion.remove(promocionEliminar);
     }
 }

@@ -17,27 +17,29 @@ import javax.persistence.Query;
  */
 @Stateless
 public class CadenaHoteleraPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-    protected EntityManager em;
+    protected EntityManager emCadenaHotelera;
+    
     public CadenaHoteleraEntity find(Long id_Cadena_Hotelera){
-        return em.find(CadenaHoteleraEntity.class, id_Cadena_Hotelera);
+        return emCadenaHotelera.find(CadenaHoteleraEntity.class, id_Cadena_Hotelera);
     }
     
     public List<CadenaHoteleraEntity> findAll() {
-        Query q = em.createQuery("select cu from CadenaHotelera cu");
+        Query q = emCadenaHotelera.createQuery("select cu from CadenaHotelera cu");
         return q.getResultList();
     }
     
-    public CadenaHoteleraEntity create(CadenaHoteleraEntity entity) {
-        em.persist(entity);
-        return entity;
+    public CadenaHoteleraEntity create(CadenaHoteleraEntity cadena) {
+        emCadenaHotelera.persist(cadena);
+        return cadena;
     }
     
-    public CadenaHoteleraEntity update(CadenaHoteleraEntity entity) {
-        return em.merge(entity);
+    public CadenaHoteleraEntity update(CadenaHoteleraEntity cadena) {
+        return emCadenaHotelera.merge(cadena);
     }
     public void delete(Long id_Cadena_Hotelera) {
-        CadenaHoteleraEntity entity = em.find(CadenaHoteleraEntity.class, id_Cadena_Hotelera);
-        em.remove(entity);
+        CadenaHoteleraEntity cadenaEliminar = emCadenaHotelera.find(CadenaHoteleraEntity.class, id_Cadena_Hotelera);
+        emCadenaHotelera.remove(cadenaEliminar);
     }
 }

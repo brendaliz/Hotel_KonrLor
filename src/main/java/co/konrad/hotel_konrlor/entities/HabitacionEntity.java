@@ -29,7 +29,7 @@ public class HabitacionEntity implements Serializable{
     @Id
     @Column(name="id_Habitacion")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long tipo_Habitacion;
+    private long id_Habitacion;
     
     @Column (name = "galeria")
     private String galeria;
@@ -38,13 +38,15 @@ public class HabitacionEntity implements Serializable{
     @JoinColumn(name = "id_hotel")
     private HotelEntity hotel;
 
-    public long getTipo_Habitacion() {
-        return tipo_Habitacion;
+    public long getId_Habitacion() {
+        return id_Habitacion;
     }
 
-    public void setTipo_Habitacion(long tipo_Habitacion) {
-        this.tipo_Habitacion = tipo_Habitacion;
+    public void setId_Habitacion(long id_Habitacion) {
+        this.id_Habitacion = id_Habitacion;
     }
+
+   
 
     public String getGaleria() {
         return galeria;

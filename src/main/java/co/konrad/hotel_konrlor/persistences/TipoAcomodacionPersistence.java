@@ -18,27 +18,29 @@ import javax.persistence.Query;
  */
 @Stateful
 public class TipoAcomodacionPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-    protected EntityManager em;
-    public TipoAcomodacionEntity find(Long id){
-        return em.find(TipoAcomodacionEntity.class, id);
+    protected EntityManager emTipoAcomodacion;
+    
+    public TipoAcomodacionEntity find(Long id_tipo_acomodacion){
+        return emTipoAcomodacion.find(TipoAcomodacionEntity.class, id_tipo_acomodacion);
     }
     
     public List<TipoAcomodacionEntity> findAll() {
-        Query q = em.createQuery("select c from TipoAcomodacionEntity c");
+        Query q = emTipoAcomodacion.createQuery("select c from TipoAcomodacionEntity c");
         return q.getResultList();
     }
     
-    public TipoAcomodacionEntity create(TipoAcomodacionEntity entity) {
-        em.persist(entity);
-        return entity;
+    public TipoAcomodacionEntity create(TipoAcomodacionEntity tipoAcomodacion) {
+        emTipoAcomodacion.persist(tipoAcomodacion);
+        return tipoAcomodacion;
     }
     
-    public TipoAcomodacionEntity update(TipoAcomodacionEntity entity) {
-        return em.merge(entity);
+    public TipoAcomodacionEntity update(TipoAcomodacionEntity tipoAcomodacion) {
+        return emTipoAcomodacion.merge(tipoAcomodacion);
     }
-    public void delete(Long id) {
-        TipoAcomodacionEntity entity = em.find(TipoAcomodacionEntity.class, id);
-        em.remove(entity);
+    public void delete(Long id_tipo_acomodacion) {
+        TipoAcomodacionEntity tipoEliminar = emTipoAcomodacion.find(TipoAcomodacionEntity.class, id_tipo_acomodacion);
+        emTipoAcomodacion.remove(tipoEliminar);
     }    
 }

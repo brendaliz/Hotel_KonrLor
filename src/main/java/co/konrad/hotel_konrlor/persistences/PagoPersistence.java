@@ -17,27 +17,29 @@ import javax.persistence.Query;
  */
 @Stateless
 public class PagoPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-    protected EntityManager em;
-    public PagoEntity find(String tipoPago){
-        return em.find(PagoEntity.class, tipoPago);
+    protected EntityManager emPago;
+    
+    public PagoEntity find(Long id_pago){
+        return emPago.find(PagoEntity.class, id_pago);
     }
     
     public List<PagoEntity> findAll() {
-        Query q = em.createQuery("select p from PagoEntity p");
+        Query q = emPago.createQuery("select p from PagoEntity p");
         return q.getResultList();
     }
     
-    public PagoEntity create(PagoEntity entity) {
-        em.persist(entity);
-        return entity;
+    public PagoEntity create(PagoEntity pago) {
+        emPago.persist(pago);
+        return pago;
     }
     
-    public PagoEntity update(PagoEntity entity) {
-        return em.merge(entity);
+    public PagoEntity update(PagoEntity pago) {
+        return emPago.merge(pago);
     }
-    public void delete(String tipoPago) {
-        PagoEntity entity = em.find(PagoEntity.class, tipoPago);
-        em.remove(entity);
+    public void delete(Long id_pago) {
+        PagoEntity pagoEliminar = emPago.find(PagoEntity.class, id_pago);
+        emPago.remove(pagoEliminar);
     }    
 }

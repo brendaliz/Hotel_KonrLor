@@ -25,7 +25,7 @@ public class ClienteOpinarHotelEntity implements Serializable{
     @Id
     @Column(name = "id_opinion")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_opinion;
     
      
     @Column(name = "comentario_opinion")
@@ -42,12 +42,12 @@ public class ClienteOpinarHotelEntity implements Serializable{
     @JoinColumn(name = "id_hotel")
     private HotelEntity hotel;
 
-    public Long getId() {
-        return id;
+    public Long getId_opinion() {
+        return id_opinion;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setId_opinion(Long id_opinion) {
+        this.id_opinion = id_opinion;
     }
 
     public String getComentario() {

@@ -17,27 +17,29 @@ import javax.persistence.Query;
  */
 @Stateless
 public class ClienteOpinarHotelPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-    protected EntityManager em;
-    public ClienteOpinarHotelEntity find(Long id){
-        return em.find(ClienteOpinarHotelEntity.class, id);
+    protected EntityManager emClienteOpinarHotel;
+    
+    public ClienteOpinarHotelEntity find(Long id_opinion){
+        return emClienteOpinarHotel.find(ClienteOpinarHotelEntity.class, id_opinion);
     }
     
     public List<ClienteOpinarHotelEntity> findAll() {
-        Query q = em.createQuery("select c from ClienteOpinarHotelEntity c");
+        Query q = emClienteOpinarHotel.createQuery("select c from ClienteOpinarHotelEntity c");
         return q.getResultList();
     }
     
-    public ClienteOpinarHotelEntity create(ClienteOpinarHotelEntity entity) {
-        em.persist(entity);
-        return entity;
+    public ClienteOpinarHotelEntity create(ClienteOpinarHotelEntity clienteOpinar) {
+        emClienteOpinarHotel.persist(clienteOpinar);
+        return clienteOpinar;
     }
     
-    public ClienteOpinarHotelEntity update(ClienteOpinarHotelEntity entity) {
-        return em.merge(entity);
+    public ClienteOpinarHotelEntity update(ClienteOpinarHotelEntity clienteOpinar) {
+        return emClienteOpinarHotel.merge(clienteOpinar);
     }
-    public void delete(Long id) {
-        ClienteOpinarHotelEntity entity = em.find(ClienteOpinarHotelEntity.class, id);
-        em.remove(entity);
+    public void delete(Long id_opinion) {
+        ClienteOpinarHotelEntity clienteOEliminar = emClienteOpinarHotel.find(ClienteOpinarHotelEntity.class, id_opinion);
+        emClienteOpinarHotel.remove(clienteOEliminar);
     }    
 }

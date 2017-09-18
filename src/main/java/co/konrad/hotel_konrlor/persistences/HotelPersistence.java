@@ -18,27 +18,29 @@ import javax.persistence.Query;
  */
 @Stateless
 public class HotelPersistence {
+    
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-    protected EntityManager em;
+    protected EntityManager emHotel;
+    
     public HotelEntity find(Long id_Hotel){
-        return em.find(HotelEntity.class, id_Hotel);
+        return emHotel.find(HotelEntity.class, id_Hotel);
     }
     
     public List<HotelEntity> findAll() {
-        Query q = em.createQuery("select h from HotelEntity h");
+        Query q = emHotel.createQuery("select h from HotelEntity h");
         return q.getResultList();
     }
     
-    public HotelEntity create(HotelEntity entity) {
-        em.persist(entity);
-        return entity;
+    public HotelEntity create(HotelEntity hotel) {
+        emHotel.persist(hotel);
+        return hotel;
     }
     
-    public HotelEntity update(HotelEntity entity) {
-        return em.merge(entity);
+    public HotelEntity update(HotelEntity hotel) {
+        return emHotel.merge(hotel);
     }
     public void delete(Long id_Hotel) {
-        HotelEntity entity = em.find(HotelEntity.class, id_Hotel);
-        em.remove(entity);
+        HotelEntity hotelEliminar = emHotel.find(HotelEntity.class, id_Hotel);
+        emHotel.remove(hotelEliminar);
     }    
 }
