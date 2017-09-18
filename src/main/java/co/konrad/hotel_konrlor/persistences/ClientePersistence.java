@@ -21,10 +21,17 @@ import javax.persistence.Query;
     public class ClientePersistence {
     
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
+<<<<<<< HEAD
     protected EntityManager emCliente;
     
     public ClienteEntity find(Long id_cliente){
         return emCliente.find(ClienteEntity.class, id_cliente);
+=======
+    protected EntityManager em;
+    
+    public ClienteEntity find(Long id_cliente){
+        return em.find(ClienteEntity.class, id_cliente);
+>>>>>>> 2666d0ace00d7f0888d6f4ee49deb7ea9f3135d5
     }
     
     public List<ClienteEntity> findAll() {
