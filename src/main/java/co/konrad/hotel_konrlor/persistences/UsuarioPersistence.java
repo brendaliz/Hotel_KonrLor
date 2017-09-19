@@ -19,11 +19,8 @@ import javax.persistence.Query;
 public class UsuarioPersistence {
     
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-<<<<<<< HEAD
+    
     protected EntityManager emUsuario;
-=======
-    protected EntityManager em;
->>>>>>> 2666d0ace00d7f0888d6f4ee49deb7ea9f3135d5
     
     public UsuarioEntity find(Long id_usuario){
         return emUsuario.find(UsuarioEntity.class, id_usuario);

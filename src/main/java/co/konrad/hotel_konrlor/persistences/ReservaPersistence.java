@@ -19,17 +19,10 @@ import javax.persistence.Query;
 public class ReservaPersistence {
     
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-<<<<<<< HEAD
     protected EntityManager emReserva;
     
     public ReservaEntity find(Long id_reserva){
         return emReserva.find(ReservaEntity.class, id_reserva);
-=======
-    protected EntityManager em;
-    
-    public ReservaEntity find(Long id_reserva){
-        return em.find(ReservaEntity.class, id_reserva);
->>>>>>> 2666d0ace00d7f0888d6f4ee49deb7ea9f3135d5
     }
     
     public List<ReservaEntity> findAll() {

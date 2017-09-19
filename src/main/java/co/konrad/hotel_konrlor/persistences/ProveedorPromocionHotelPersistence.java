@@ -20,17 +20,10 @@ import javax.persistence.Query;
 public class ProveedorPromocionHotelPersistence {
     
     @PersistenceContext(unitName = "Hotel_KonLonrPU")
-<<<<<<< HEAD
     protected EntityManager emPromocion;
     
     public ProveedorPromocionHotelEntity find(Long id_p_Promocion_hotel){
         return emPromocion.find(ProveedorPromocionHotelEntity.class, id_p_Promocion_hotel);
-=======
-    protected EntityManager em;
-    
-    public ProveedorPromocionHotelEntity find(Long id_p_Promocion_hotel){
-        return em.find(ProveedorPromocionHotelEntity.class, id_p_Promocion_hotel);
->>>>>>> 2666d0ace00d7f0888d6f4ee49deb7ea9f3135d5
     }
     
     public List<ProveedorPromocionHotelEntity> findAll() {
