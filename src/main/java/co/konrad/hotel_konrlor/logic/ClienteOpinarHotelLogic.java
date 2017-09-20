@@ -37,7 +37,7 @@ public class ClienteOpinarHotelLogic {
         return clienteOpinarHotel;
     }
     
-    public ClienteOpinarHotelEntity createFestival(ClienteOpinarHotelEntity clienteOpinarHotel){
+    public ClienteOpinarHotelEntity createClienteOpinarHotel(ClienteOpinarHotelEntity clienteOpinarHotel){
         clienteOpinarHotelPersistence.create(clienteOpinarHotel);
         return clienteOpinarHotel;
     }
