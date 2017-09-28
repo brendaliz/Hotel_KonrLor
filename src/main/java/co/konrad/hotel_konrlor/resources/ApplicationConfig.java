@@ -31,5 +31,7 @@ public class ApplicationConfig extends Application{
         resources.add(co.konrad.hotel_konrlor.resources.HabitacionResource.class);
         resources.add(co.konrad.hotel_konrlor.resources.HotelResource.class);
         resources.add(co.konrad.hotel_konrlor.resources.PagoCreditoResource.class);
+        resources.add(co.konrad.hotel_konrlor.resources.PagoDebitoResource.class);
+        resources.add(co.konrad.hotel_konrlor.resources.PagoResource.class);        
     }
 }
