@@ -48,8 +48,8 @@ public class ClienteOpinarHotelResource {
      */
     @GET
     @Path("{id: \\d+}")
-    public ClienteOpinarHotelDTO getClienteOpinarHotel(@PathParam("id") Long id){
-        ClienteOpinarHotelEntity clienteOpinarHotel = clienteOpinarHotelLogic.getClienteOpinarHotel(id);
+    public ClienteOpinarHotelDTO getClienteOpinarHotel(@PathParam("id") Long id_opinion){
+        ClienteOpinarHotelEntity clienteOpinarHotel = clienteOpinarHotelLogic.getClienteOpinarHotel(id_opinion);
         if(clienteOpinarHotel == null){
             throw new RuntimeException("La opinion sobre el hotel no existe");
         }
@@ -74,21 +74,21 @@ public class ClienteOpinarHotelResource {
      */
     @PUT
     @Path("{clienteOpinarHotelId: \\d+}")
-    public ClienteOpinarHotelDTO updateClienteOpinarHotel(@PathParam("clienteOpinarHotelId") Long id, ClienteOpinarHotelDTO clienteOpinarHotel){
-        ClienteOpinarHotelEntity clienteOpinarHotelEntity = clienteOpinarHotelLogic.getClienteOpinarHotel(id);
+    public ClienteOpinarHotelDTO updateClienteOpinarHotel(@PathParam("clienteOpinarHotelId") Long id_opinion, ClienteOpinarHotelDTO clienteOpinarHotel){
+        ClienteOpinarHotelEntity clienteOpinarHotelEntity = clienteOpinarHotelLogic.getClienteOpinarHotel(id_opinion);
         if(clienteOpinarHotelEntity == null){
             throw new RuntimeException("La opinon sobre el hotel no existe");
         }
-        return new ClienteOpinarHotelDTO(clienteOpinarHotelLogic.updateClienteOpinarHotel(id, clienteOpinarHotel.toEntity()));
+        return new ClienteOpinarHotelDTO(clienteOpinarHotelLogic.updateClienteOpinarHotel(id_opinion, clienteOpinarHotel.toEntity()));
     }
     
     @DELETE
     @Path("{clienteOpinarHotelId: \\d+}")
-    public void deleteClienteOpinarHotel(@PathParam("clienteOpinarHotelId") Long id){
-        ClienteOpinarHotelEntity clienteOpinarHotelEntity = clienteOpinarHotelLogic.getClienteOpinarHotel(id);
+    public void deleteClienteOpinarHotel(@PathParam("clienteOpinarHotelId") Long id_opinion){
+        ClienteOpinarHotelEntity clienteOpinarHotelEntity = clienteOpinarHotelLogic.getClienteOpinarHotel(id_opinion);
         if(clienteOpinarHotelEntity == null){
             throw new RuntimeException("La opinion sobre el hotel no existe");
         }
-        clienteOpinarHotelLogic.deleteClienteOpinarHotel(id);
+        clienteOpinarHotelLogic.deleteClienteOpinarHotel(id_opinion);
     }
 }

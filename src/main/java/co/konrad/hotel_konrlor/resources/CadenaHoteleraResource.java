@@ -49,8 +49,8 @@ public class CadenaHoteleraResource {
      */
     @GET
     @Path("{id: \\d+}")
-    public CadenaHoteleraDTO getCadenaHotelera(@PathParam("id") Long id){
-        CadenaHoteleraEntity cadenaHotelera = cadenaHoteleraLogic.getCadenaHotelera(id);
+    public CadenaHoteleraDTO getCadenaHotelera(@PathParam("id") Long id_Cadena_Hotelera){
+        CadenaHoteleraEntity cadenaHotelera = cadenaHoteleraLogic.getCadenaHotelera(id_Cadena_Hotelera);
         if(cadenaHotelera == null){
             throw new RuntimeException("La cadena hotelera no existe");
         }
@@ -75,21 +75,21 @@ public class CadenaHoteleraResource {
      */
     @PUT
     @Path("{cadenaHoteleraId: \\d+}")
-    public CadenaHoteleraDTO updateCadenaHotelera(@PathParam("cadenaHoteleraId") Long id, CadenaHoteleraDTO cadenaHotelera){
-        CadenaHoteleraEntity cadenaHoteleraEntity = cadenaHoteleraLogic.getCadenaHotelera(id);
+    public CadenaHoteleraDTO updateCadenaHotelera(@PathParam("cadenaHoteleraId") Long id_Cadena_Hotelera, CadenaHoteleraDTO cadenaHotelera){
+        CadenaHoteleraEntity cadenaHoteleraEntity = cadenaHoteleraLogic.getCadenaHotelera(id_Cadena_Hotelera);
         if(cadenaHoteleraEntity == null){
             throw new RuntimeException("La cadena hotelera no existe");
         }
-        return new CadenaHoteleraDTO(cadenaHoteleraLogic.updateCadenaHotelera(id, cadenaHotelera.toEntity()));
+        return new CadenaHoteleraDTO(cadenaHoteleraLogic.updateCadenaHotelera(id_Cadena_Hotelera, cadenaHotelera.toEntity()));
     }
     
     @DELETE
     @Path("{cadenaHoteleraId: \\d+}")
-    public void deleteCadenaHotelera(@PathParam("cadenaHoteleraId") Long id){
-        CadenaHoteleraEntity cadenaHoteleraEntity = cadenaHoteleraLogic.getCadenaHotelera(id);
+    public void deleteCadenaHotelera(@PathParam("cadenaHoteleraId") Long id_Cadena_Hotelera){
+        CadenaHoteleraEntity cadenaHoteleraEntity = cadenaHoteleraLogic.getCadenaHotelera(id_Cadena_Hotelera);
         if(cadenaHoteleraEntity == null){
             throw new RuntimeException("La cadena hotelera no existe");
         }
-        cadenaHoteleraLogic.deleteCadenaHotelera(id);
+        cadenaHoteleraLogic.deleteCadenaHotelera(id_Cadena_Hotelera);
     }    
 }

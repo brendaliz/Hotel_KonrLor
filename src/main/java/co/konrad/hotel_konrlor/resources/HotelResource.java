@@ -49,8 +49,8 @@ public class HotelResource {
      */
     @GET
     @Path("{id: \\d+}")
-    public HotelDTO getHotel(@PathParam("id") Long id){
-        HotelEntity hotel = hotelLogic.getHotel(id);
+    public HotelDTO getHotel(@PathParam("id") Long id_hotel){
+        HotelEntity hotel = hotelLogic.getHotel(id_hotel);
         if(hotel == null){
             throw new RuntimeException("El hotel no existe");
         }
@@ -75,21 +75,21 @@ public class HotelResource {
      */
     @PUT
     @Path("{hotelId: \\d+}")
-    public HotelDTO updateHotel(@PathParam("hotelId") Long id, HotelDTO hotel){
-        HotelEntity hotelEntity = hotelLogic.getHotel(id);
+    public HotelDTO updateHotel(@PathParam("hotelId") Long id_hotel, HotelDTO hotel){
+        HotelEntity hotelEntity = hotelLogic.getHotel(id_hotel);
         if(hotelEntity == null){
             throw new RuntimeException("El hotel no existe");
         }
-        return new HotelDTO(hotelLogic.updateHotel(id, hotel.toEntity()));
+        return new HotelDTO(hotelLogic.updateHotel(id_hotel, hotel.toEntity()));
     }
     
     @DELETE
     @Path("{hotelId: \\d+}")
-    public void deleteHotel(@PathParam("hotelId") Long id){
-        HotelEntity hotelEntity = hotelLogic.getHotel(id);
+    public void deleteHotel(@PathParam("hotelId") Long id_hotel){
+        HotelEntity hotelEntity = hotelLogic.getHotel(id_hotel);
         if(hotelEntity == null){
             throw new RuntimeException("El hotel no existe");
         }
-        hotelLogic.deleteHotel(id);
+        hotelLogic.deleteHotel(id_hotel);
     }
 }

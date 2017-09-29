@@ -29,8 +29,8 @@ public class HotelLogic {
     /*Obtener un objeto de la tabla 
         @Param id
         @return hotel*/
-    public HotelEntity getHotel(Long id){
-        HotelEntity hotel = hotelPersistence.find(id);
+    public HotelEntity getHotel(Long id_hotel){
+        HotelEntity hotel = hotelPersistence.find(id_hotel);
         if(hotel == null){
             throw new IllegalArgumentException("El hotel solicitado no existe");
         }
@@ -44,7 +44,7 @@ public class HotelLogic {
     
     /* ACTUALIZACION OBJETO HOTEL*/
     
-    public HotelEntity updateHotel(Long id, HotelEntity hotel){
+    public HotelEntity updateHotel(Long id_hotel, HotelEntity hotel){
         HotelEntity hotelEntity = hotelPersistence.update(hotel);
         return hotelEntity;
     }
@@ -52,7 +52,7 @@ public class HotelLogic {
     Eliminar un objeto hotel
     @param id
     */
-    public void deleteHotel (Long id){
-        hotelPersistence.delete(id);
+    public void deleteHotel (Long id_hotel){
+        hotelPersistence.delete(id_hotel);
     }
 }

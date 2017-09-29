@@ -29,8 +29,8 @@ public class PagoLogic {
     /*Obtener un objeto de la tabla 
         @Param id
         @return pago*/
-    public PagoEntity getPago(Long id){
-        PagoEntity pago = pagoPersistence.find(id);
+    public PagoEntity getPago(Long id_pago){
+        PagoEntity pago = pagoPersistence.find(id_pago);
         if(pago == null){
             throw new IllegalArgumentException("El pago solicitado no existe");
         }
@@ -44,7 +44,7 @@ public class PagoLogic {
     
     /* ACTUALIZACION OBJETO PAGO*/
     
-    public PagoEntity updatePago(Long id, PagoEntity pago){
+    public PagoEntity updatePago(Long id_pago, PagoEntity pago){
         PagoEntity pagoEntity = pagoPersistence.update(pago);
         return pagoEntity;
     }
@@ -52,7 +52,7 @@ public class PagoLogic {
     Eliminar un objeto pago
     @param id
     */
-    public void deletePago (Long id){
-        pagoPersistence.delete(id);
+    public void deletePago (Long id_pago){
+        pagoPersistence.delete(id_pago);
     }    
 }

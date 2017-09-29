@@ -29,8 +29,8 @@ public class HabitacionLogic {
     /*Obtener un objeto de la tabla 
         @Param id
         @return habitacion*/
-    public HabitacionEntity getHabitacion(Long id){
-        HabitacionEntity habitacion = habitacionPersistence.find(id);
+    public HabitacionEntity getHabitacion(Long id_Habitacion){
+        HabitacionEntity habitacion = habitacionPersistence.find(id_Habitacion);
         if(habitacion == null){
             throw new IllegalArgumentException("La habitacion solicitada no existe");
         }
@@ -44,7 +44,7 @@ public class HabitacionLogic {
     
     /* ACTUALIZACION OBJETO HABITACION*/
     
-    public HabitacionEntity updateHabitacion(Long id, HabitacionEntity habitacion){
+    public HabitacionEntity updateHabitacion(Long id_Habitacion, HabitacionEntity habitacion){
         HabitacionEntity habitacionEntity = habitacionPersistence.update(habitacion);
         return habitacionEntity;
     }
@@ -52,7 +52,7 @@ public class HabitacionLogic {
     Eliminar un objeto habitacion
     @param id
     */
-    public void deleteHabitacion (Long id){
-        habitacionPersistence.delete(id);
+    public void deleteHabitacion (Long id_Habitacion){
+        habitacionPersistence.delete(id_Habitacion);
     }
 }

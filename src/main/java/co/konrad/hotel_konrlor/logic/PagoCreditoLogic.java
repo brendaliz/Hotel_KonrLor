@@ -29,8 +29,8 @@ public class PagoCreditoLogic {
     /*Obtener un objeto de la tabla 
         @Param id
         @return pagoCredito*/
-    public PagoCreditoEntity getPagoCredito(Long id){
-        PagoCreditoEntity pagoCredito = pagoCreditoPersistence.find(id);
+    public PagoCreditoEntity getPagoCredito(Long id_num_tarjeta){
+        PagoCreditoEntity pagoCredito = pagoCreditoPersistence.find(id_num_tarjeta);
         if(pagoCredito == null){
             throw new IllegalArgumentException("El pago en credito solicitado no existe");
         }
@@ -44,7 +44,7 @@ public class PagoCreditoLogic {
     
     /* ACTUALIZACION OBJETO PAGO_CREDITO*/
     
-    public PagoCreditoEntity updatePagoCredito(Long id, PagoCreditoEntity pagoCredito){
+    public PagoCreditoEntity updatePagoCredito(Long id_num_tarjeta, PagoCreditoEntity pagoCredito){
         PagoCreditoEntity pagoCreditoEntity = pagoCreditoPersistence.update(pagoCredito);
         return pagoCreditoEntity;
     }
@@ -52,7 +52,7 @@ public class PagoCreditoLogic {
     Eliminar un objeto pagoCredito
     @param id
     */
-    public void deletePagoCredito (Long id){
-        pagoCreditoPersistence.delete(id);
+    public void deletePagoCredito (Long id_num_tarjeta){
+        pagoCreditoPersistence.delete(id_num_tarjeta);
     }
 }

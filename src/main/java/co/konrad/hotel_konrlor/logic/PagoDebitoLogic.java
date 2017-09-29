@@ -29,8 +29,8 @@ public class PagoDebitoLogic {
     /*Obtener un objeto de la tabla 
         @Param id
         @return pagoDebito*/
-    public PagoDebitoEntity getPagoDebito(Long id){
-        PagoDebitoEntity pagoDebito = pagoDebitoPersistence.find(id);
+    public PagoDebitoEntity getPagoDebito(Long id_num_cuenta){
+        PagoDebitoEntity pagoDebito = pagoDebitoPersistence.find(id_num_cuenta);
         if(pagoDebito == null){
             throw new IllegalArgumentException("El pago en debito solicitado no existe");
         }
@@ -44,7 +44,7 @@ public class PagoDebitoLogic {
     
     /* ACTUALIZACION OBJETO PAGO_DEBITO*/
     
-    public PagoDebitoEntity updatePagoDebito(Long id, PagoDebitoEntity pagoDebito){
+    public PagoDebitoEntity updatePagoDebito(Long id_num_cuenta, PagoDebitoEntity pagoDebito){
         PagoDebitoEntity pagoDebitoEntity = pagoDebitoPersistence.update(pagoDebito);
         return pagoDebitoEntity;
     }
@@ -52,7 +52,7 @@ public class PagoDebitoLogic {
     Eliminar un objeto pagoDebito
     @param id
     */
-    public void deletePagoDebito (Long id){
-        pagoDebitoPersistence.delete(id);
+    public void deletePagoDebito (Long id_num_cuenta){
+        pagoDebitoPersistence.delete(id_num_cuenta);
     }
 }

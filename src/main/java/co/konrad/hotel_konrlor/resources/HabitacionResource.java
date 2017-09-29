@@ -48,8 +48,8 @@ public class HabitacionResource {
      */
     @GET
     @Path("{id: \\d+}")
-    public HabitacionDTO getHabitacion(@PathParam("id") Long id){
-        HabitacionEntity habitacion = habitacionLogic.getHabitacion(id);
+    public HabitacionDTO getHabitacion(@PathParam("id") Long id_Habitacion){
+        HabitacionEntity habitacion = habitacionLogic.getHabitacion(id_Habitacion);
         if(habitacion == null){
             throw new RuntimeException("La habitacion no existe");
         }
@@ -74,21 +74,21 @@ public class HabitacionResource {
      */
     @PUT
     @Path("{habitacionId: \\d+}")
-    public HabitacionDTO updateHabitacion(@PathParam("habitacionId") Long id, HabitacionDTO habitacion){
-        HabitacionEntity habitacionEntity = habitacionLogic.getHabitacion(id);
+    public HabitacionDTO updateHabitacion(@PathParam("habitacionId") Long id_Habitacion, HabitacionDTO habitacion){
+        HabitacionEntity habitacionEntity = habitacionLogic.getHabitacion(id_Habitacion);
         if(habitacionEntity == null){
             throw new RuntimeException("La habitacion no existe");
         }
-        return new HabitacionDTO(habitacionLogic.updateHabitacion(id, habitacion.toEntity()));
+        return new HabitacionDTO(habitacionLogic.updateHabitacion(id_Habitacion, habitacion.toEntity()));
     }
     
     @DELETE
     @Path("{habitacionId: \\d+}")
-    public void deleteHabitacion(@PathParam("habitacionId") Long id){
-        HabitacionEntity habitacionEntity = habitacionLogic.getHabitacion(id);
+    public void deleteHabitacion(@PathParam("habitacionId") Long id_Habitacion){
+        HabitacionEntity habitacionEntity = habitacionLogic.getHabitacion(id_Habitacion);
         if(habitacionEntity == null){
             throw new RuntimeException("La habitacion no existe");
         }
-        habitacionLogic.deleteHabitacion(id);
+        habitacionLogic.deleteHabitacion(id_Habitacion);
     }
 }

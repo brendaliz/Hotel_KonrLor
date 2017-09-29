@@ -49,8 +49,8 @@ public class ClienteResource {
      */
     @GET
     @Path("{id: \\d+}")
-    public ClienteDTO getCliente(@PathParam("id") Long id){
-        ClienteEntity cliente = clienteLogic.getCliente(id);
+    public ClienteDTO getCliente(@PathParam("id") Long id_cliente){
+        ClienteEntity cliente = clienteLogic.getCliente(id_cliente);
         if(cliente == null){
             throw new RuntimeException("El cliente no existe");
         }
@@ -75,21 +75,21 @@ public class ClienteResource {
      */
     @PUT
     @Path("{clienteId: \\d+}")
-    public ClienteDTO updateCliente(@PathParam("clienteId") Long id, ClienteDTO cliente){
-        ClienteEntity clienteEntity = clienteLogic.getCliente(id);
+    public ClienteDTO updateCliente(@PathParam("clienteId") Long id_cliente, ClienteDTO cliente){
+        ClienteEntity clienteEntity = clienteLogic.getCliente(id_cliente);
         if(clienteEntity == null){
             throw new RuntimeException("El cliente no existe");
         }
-        return new ClienteDTO(clienteLogic.updateCliente(id, cliente.toEntity()));
+        return new ClienteDTO(clienteLogic.updateCliente(id_cliente, cliente.toEntity()));
     }
     
     @DELETE
     @Path("{clienteId: \\d+}")
-    public void deleteCliente(@PathParam("cleinteId") Long id){
-        ClienteEntity clienteEntity = clienteLogic.getCliente(id);
+    public void deleteCliente(@PathParam("cleinteId") Long id_cliente){
+        ClienteEntity clienteEntity = clienteLogic.getCliente(id_cliente);
         if(clienteEntity == null){
             throw new RuntimeException("El cliente no existe");
         }
-        clienteLogic.deleteCliente(id);
+        clienteLogic.deleteCliente(id_cliente);
     }    
 }
