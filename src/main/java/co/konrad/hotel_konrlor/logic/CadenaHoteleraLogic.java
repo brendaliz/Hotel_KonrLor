@@ -29,8 +29,8 @@ public class CadenaHoteleraLogic {
     /*Obtener un objeto de la tabla 
         @Param id
         @return cadenaHotelera*/
-    public CadenaHoteleraEntity getCadenaHotelera(Long id){
-        CadenaHoteleraEntity cadenaHotelera = cadenaHoteleraPersistence.find(id);
+    public CadenaHoteleraEntity getCadenaHotelera(Long id_Cadena_Hotelera){
+        CadenaHoteleraEntity cadenaHotelera = cadenaHoteleraPersistence.find(id_Cadena_Hotelera);
         if(cadenaHotelera == null){
             throw new IllegalArgumentException("La cadena hotelera solicitada no existe");
         }
@@ -44,7 +44,7 @@ public class CadenaHoteleraLogic {
     
     /* ACTUALIZACION OBJETO CADENA_HOTELERA*/
     
-    public CadenaHoteleraEntity updateCadenaHotelera(Long id, CadenaHoteleraEntity cadenaHotelera){
+    public CadenaHoteleraEntity updateCadenaHotelera(Long id_Cadena_Hotelera, CadenaHoteleraEntity cadenaHotelera){
         CadenaHoteleraEntity cadenaHoteleraEntity = cadenaHoteleraPersistence.update(cadenaHotelera);
         return cadenaHoteleraEntity;
     }
@@ -52,7 +52,7 @@ public class CadenaHoteleraLogic {
     Eliminar un objeto cadenaHotelera
     @param id
     */
-    public void deleteCadenaHotelera (Long id){
-        cadenaHoteleraPersistence.delete(id);
+    public void deleteCadenaHotelera (Long id_Cadena_Hotelera){
+        cadenaHoteleraPersistence.delete(id_Cadena_Hotelera);
     }
 }

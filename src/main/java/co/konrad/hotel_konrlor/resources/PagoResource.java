@@ -48,8 +48,8 @@ public class PagoResource {
      */
     @GET
     @Path("{id: \\d+}")
-    public PagoDTO getPago (@PathParam("id") Long id){
-        PagoEntity pago = pagoLogic.getPago(id);
+    public PagoDTO getPago (@PathParam("id") Long id_pago){
+        PagoEntity pago = pagoLogic.getPago(id_pago);
         if(pago == null){
             throw new RuntimeException("El pago no existe");
         }
@@ -74,21 +74,21 @@ public class PagoResource {
      */
     @PUT
     @Path("{pagoId: \\d+}")
-    public PagoDTO updatePago(@PathParam("pagoId") Long id, PagoDTO pago){
-        PagoEntity pagoEntity = pagoLogic.getPago(id);
+    public PagoDTO updatePago(@PathParam("pagoId") Long id_pago, PagoDTO pago){
+        PagoEntity pagoEntity = pagoLogic.getPago(id_pago);
         if(pagoEntity == null){
             throw new RuntimeException("El pago no existe");
         }
-        return new PagoDTO(pagoLogic.updatePago(id, pago.toEntity()));
+        return new PagoDTO(pagoLogic.updatePago(id_pago, pago.toEntity()));
     }
     
     @DELETE
     @Path("{pagoId: \\d+}")
-    public void deletePago(@PathParam("pagoId") Long id){
-        PagoEntity pagoEntity = pagoLogic.getPago(id);
+    public void deletePago(@PathParam("pagoId") Long id_pago){
+        PagoEntity pagoEntity = pagoLogic.getPago(id_pago);
         if(pagoEntity == null){
             throw new RuntimeException("El pago no existe");
         }
-        pagoLogic.deletePago(id);
+        pagoLogic.deletePago(id_pago);
     }    
 }

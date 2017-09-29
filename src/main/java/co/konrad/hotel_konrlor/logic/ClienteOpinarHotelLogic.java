@@ -29,8 +29,8 @@ public class ClienteOpinarHotelLogic {
     /*Obtener un objeto de la tabla 
         @Param id
         @return clienteOpinarHotel*/
-    public ClienteOpinarHotelEntity getClienteOpinarHotel(Long id){
-        ClienteOpinarHotelEntity clienteOpinarHotel = clienteOpinarHotelPersistence.find(id);
+    public ClienteOpinarHotelEntity getClienteOpinarHotel(Long id_opinion){
+        ClienteOpinarHotelEntity clienteOpinarHotel = clienteOpinarHotelPersistence.find(id_opinion);
         if(clienteOpinarHotel == null){
             throw new IllegalArgumentException("La opinion del hotel solicitado no existe");
         }
@@ -44,7 +44,7 @@ public class ClienteOpinarHotelLogic {
     
     /* ACTUALIZACION OBJETO CLIENTE_OPINAR_HOTEL*/
     
-    public ClienteOpinarHotelEntity updateClienteOpinarHotel(Long id, ClienteOpinarHotelEntity clienteOpinarHotel){
+    public ClienteOpinarHotelEntity updateClienteOpinarHotel(Long id_opinion, ClienteOpinarHotelEntity clienteOpinarHotel){
         ClienteOpinarHotelEntity clienteOpinarHotelEntity = clienteOpinarHotelPersistence.update(clienteOpinarHotel);
         return clienteOpinarHotelEntity;
     }
@@ -52,8 +52,8 @@ public class ClienteOpinarHotelLogic {
     Eliminar un objeto clienteOpinarHotel
     @param id
     */
-    public void deleteClienteOpinarHotel (Long id){
-        clienteOpinarHotelPersistence.delete(id);
+    public void deleteClienteOpinarHotel (Long id_opinion){
+        clienteOpinarHotelPersistence.delete(id_opinion);
     }
     
 }

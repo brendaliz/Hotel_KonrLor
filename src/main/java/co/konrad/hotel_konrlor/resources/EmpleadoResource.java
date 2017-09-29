@@ -48,8 +48,8 @@ public class EmpleadoResource {
      */
     @GET
     @Path("{id: \\d+}")
-    public EmpleadoDTO getFestival(@PathParam("id") Long id){
-        EmpleadoEntity empleado = empleadoLogic.getEmpleado(id);
+    public EmpleadoDTO getFestival(@PathParam("id") Long id_empleado){
+        EmpleadoEntity empleado = empleadoLogic.getEmpleado(id_empleado);
         if(empleado == null){
             throw new RuntimeException("El empleado no existe");
         }
@@ -74,21 +74,21 @@ public class EmpleadoResource {
      */
     @PUT
     @Path("{empleadoId: \\d+}")
-    public EmpleadoDTO updateEmpleado(@PathParam("empleadoId") Long id, EmpleadoDTO empleado){
-        EmpleadoEntity empleadoEntity = empleadoLogic.getEmpleado(id);
+    public EmpleadoDTO updateEmpleado(@PathParam("empleadoId") Long id_empleado, EmpleadoDTO empleado){
+        EmpleadoEntity empleadoEntity = empleadoLogic.getEmpleado(id_empleado);
         if(empleadoEntity == null){
             throw new RuntimeException("El empleado no existe");
         }
-        return new EmpleadoDTO(empleadoLogic.updateEmpleado(id, empleado.toEntity()));
+        return new EmpleadoDTO(empleadoLogic.updateEmpleado(id_empleado, empleado.toEntity()));
     }
     
     @DELETE
     @Path("{empleadoId: \\d+}")
-    public void deleteEmpleado(@PathParam("empleadoId") Long id){
-        EmpleadoEntity empleadoEntity = empleadoLogic.getEmpleado(id);
+    public void deleteEmpleado(@PathParam("empleadoId") Long id_empleado){
+        EmpleadoEntity empleadoEntity = empleadoLogic.getEmpleado(id_empleado);
         if(empleadoEntity == null){
             throw new RuntimeException("El empleado no existe");
         }
-        empleadoLogic.deleteEmpleado(id);
+        empleadoLogic.deleteEmpleado(id_empleado);
     }    
 }

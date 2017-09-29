@@ -29,8 +29,8 @@ public class EmpleadoLogic {
     /*Obtener un objeto de la tabla 
         @Param id
         @return empleado*/
-    public EmpleadoEntity getEmpleado(Long id){
-        EmpleadoEntity empleado = empleadoPersistence.find(id);
+    public EmpleadoEntity getEmpleado(Long id_empleado){
+        EmpleadoEntity empleado = empleadoPersistence.find(id_empleado);
         if(empleado == null){
             throw new IllegalArgumentException("El empleado solicitado no existe");
         }
@@ -44,7 +44,7 @@ public class EmpleadoLogic {
     
     /* ACTUALIZACION OBJETO EMPLEADO*/
     
-    public EmpleadoEntity updateEmpleado(Long id, EmpleadoEntity empleado){
+    public EmpleadoEntity updateEmpleado(Long id_empleado, EmpleadoEntity empleado){
         EmpleadoEntity empleadoEntity = empleadoPersistence.update(empleado);
         return empleadoEntity;
     }
@@ -52,7 +52,7 @@ public class EmpleadoLogic {
     Eliminar un objeto empleado
     @param id
     */
-    public void deleteEmpleado (Long id){
-        empleadoPersistence.delete(id);
+    public void deleteEmpleado (Long id_empleado){
+        empleadoPersistence.delete(id_empleado);
     }
 }

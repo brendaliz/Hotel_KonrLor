@@ -48,8 +48,8 @@ public class PagoDebitoResource {
      */
     @GET
     @Path("{id: \\d+}")
-    public PagoDebitoDTO getPagoDebito(@PathParam("id") Long id){
-        PagoDebitoEntity pagoDebito = pagoDebitoLogic.getPagoDebito(id);
+    public PagoDebitoDTO getPagoDebito(@PathParam("id") Long id_num_cuenta){
+        PagoDebitoEntity pagoDebito = pagoDebitoLogic.getPagoDebito(id_num_cuenta);
         if(pagoDebito == null){
             throw new RuntimeException("El pago con tarjeta debito no existe");
         }
@@ -74,21 +74,21 @@ public class PagoDebitoResource {
      */
     @PUT
     @Path("{pagoDebitoId: \\d+}")
-    public PagoDebitoDTO updatePagoDebito(@PathParam("pagoDebitoId") Long id, PagoDebitoDTO pagoDebito){
-        PagoDebitoEntity pagoDebitoEntity = pagoDebitoLogic.getPagoDebito(id);
+    public PagoDebitoDTO updatePagoDebito(@PathParam("pagoDebitoId") Long id_num_cuenta, PagoDebitoDTO pagoDebito){
+        PagoDebitoEntity pagoDebitoEntity = pagoDebitoLogic.getPagoDebito(id_num_cuenta);
         if(pagoDebitoEntity == null){
             throw new RuntimeException("El pago con tarjeta debito no existe");
         }
-        return new PagoDebitoDTO(pagoDebitoLogic.updatePagoDebito(id, pagoDebito.toEntity()));
+        return new PagoDebitoDTO(pagoDebitoLogic.updatePagoDebito(id_num_cuenta, pagoDebito.toEntity()));
     }
     
     @DELETE
     @Path("{pagoDebitoId: \\d+}")
-    public void deletePagoDebito(@PathParam("pagoDebitoId") Long id){
-        PagoDebitoEntity pagoDebitoEntity = pagoDebitoLogic.getPagoDebito(id);
+    public void deletePagoDebito(@PathParam("pagoDebitoId") Long id_num_cuenta){
+        PagoDebitoEntity pagoDebitoEntity = pagoDebitoLogic.getPagoDebito(id_num_cuenta);
         if(pagoDebitoEntity == null){
             throw new RuntimeException("El pago con tarjeta debito no existe");
         }
-        pagoDebitoLogic.deletePagoDebito(id);
+        pagoDebitoLogic.deletePagoDebito(id_num_cuenta);
     }    
 }

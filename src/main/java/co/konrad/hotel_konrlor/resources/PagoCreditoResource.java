@@ -48,8 +48,8 @@ public class PagoCreditoResource {
      */
     @GET
     @Path("{id: \\d+}")
-    public PagoCreditoDTO getPagoCredito(@PathParam("id") Long id){
-        PagoCreditoEntity pagoCredito = pagoCreditoLogic.getPagoCredito(id);
+    public PagoCreditoDTO getPagoCredito(@PathParam("id") Long id_num_tarjeta){
+        PagoCreditoEntity pagoCredito = pagoCreditoLogic.getPagoCredito(id_num_tarjeta);
         if(pagoCredito == null){
             throw new RuntimeException("El pago con tarjeta de credito no existe");
         }
@@ -74,21 +74,21 @@ public class PagoCreditoResource {
      */
     @PUT
     @Path("{pagoCreditoId: \\d+}")
-    public PagoCreditoDTO updatePagoCredito(@PathParam("pagoCreditoId") Long id, PagoCreditoDTO pagoCredito){
-        PagoCreditoEntity pagoCreditoEntity = pagoCreditoLogic.getPagoCredito(id);
+    public PagoCreditoDTO updatePagoCredito(@PathParam("pagoCreditoId") Long id_num_tarjeta, PagoCreditoDTO pagoCredito){
+        PagoCreditoEntity pagoCreditoEntity = pagoCreditoLogic.getPagoCredito(id_num_tarjeta);
         if(pagoCreditoEntity == null){
             throw new RuntimeException("El pago con tarjeta de credito no existe");
         }
-        return new PagoCreditoDTO(pagoCreditoLogic.updatePagoCredito(id, pagoCredito.toEntity()));
+        return new PagoCreditoDTO(pagoCreditoLogic.updatePagoCredito(id_num_tarjeta, pagoCredito.toEntity()));
     }
     
     @DELETE
     @Path("{pagoCreditoId: \\d+}")
-    public void deletePagoCredito(@PathParam("pagoCreditoId") Long id){
-        PagoCreditoEntity pagoCreditoEntity = pagoCreditoLogic.getPagoCredito(id);
+    public void deletePagoCredito(@PathParam("pagoCreditoId") Long id_num_tarjeta){
+        PagoCreditoEntity pagoCreditoEntity = pagoCreditoLogic.getPagoCredito(id_num_tarjeta);
         if(pagoCreditoEntity == null){
             throw new RuntimeException("El pago con tarjeta de credito no existe");
         }
-        pagoCreditoLogic.deletePagoCredito(id);
+        pagoCreditoLogic.deletePagoCredito(id_num_tarjeta);
     }
 }

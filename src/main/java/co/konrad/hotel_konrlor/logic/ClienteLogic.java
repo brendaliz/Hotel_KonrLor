@@ -29,8 +29,8 @@ public class ClienteLogic {
     /*Obtener un objeto de la tabla 
         @Param id
         @return cliente*/
-    public ClienteEntity getCliente(Long id){
-        ClienteEntity cliente = clientePersistence.find(id);
+    public ClienteEntity getCliente(Long id_cliente){
+        ClienteEntity cliente = clientePersistence.find(id_cliente);
         if(cliente == null){
             throw new IllegalArgumentException("El cliente solicitado no existe");
         }
@@ -44,7 +44,7 @@ public class ClienteLogic {
     
     /* ACTUALIZACION OBJETO CLIENTE*/
     
-    public ClienteEntity updateCliente(Long id, ClienteEntity cliente){
+    public ClienteEntity updateCliente(Long id_cliente, ClienteEntity cliente){
         ClienteEntity clienteEntity = clientePersistence.update(cliente);
         return clienteEntity;
     }
@@ -52,7 +52,7 @@ public class ClienteLogic {
     Eliminar un objeto cliente
     @param id
     */
-    public void deleteCliente (Long id){
-        clientePersistence.delete(id);
+    public void deleteCliente (Long id_cliente){
+        clientePersistence.delete(id_cliente);
     }
 }
