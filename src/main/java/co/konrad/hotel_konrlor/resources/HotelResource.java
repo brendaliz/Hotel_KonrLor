@@ -44,7 +44,7 @@ public class HotelResource {
     //investigar expresiones regulares en java
     /**
      * Metodo GET para obtener un solo objeto
-     * @param id
+     * @param id_hotel 
      * @return  List
      */
     @GET
@@ -69,7 +69,7 @@ public class HotelResource {
     
     /**
      * Metodo PUT actualizacion hotel
-     * @param id
+     * @param id_hotel 
      * @param hotel
      * @return HotelDTO
      */

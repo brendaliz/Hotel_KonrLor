@@ -43,7 +43,7 @@ public class EmpleadoResource {
     //investigar expresiones regulares en java
     /**
      * Metodo GET para obtener un solo objeto
-     * @param id
+     * @param id_empleado 
      * @return  List
      */
     @GET
@@ -68,7 +68,7 @@ public class EmpleadoResource {
     
     /**
      * Metodo PUT actualizacion empleado
-     * @param id
+     * @param id_empleado 
      * @param empleado
      * @return EmpleadoDTO
      */

@@ -44,7 +44,7 @@ public class ClienteResource {
     //investigar expresiones regulares en java
     /**
      * Metodo GET para obtener un solo objeto
-     * @param id
+     * @param id_cliente 
      * @return  List
      */
     @GET
@@ -69,7 +69,7 @@ public class ClienteResource {
     
     /**
      * Metodo PUT actualizacion cliente
-     * @param id
+     * @param id_cliente 
      * @param cliente
      * @return ClienteDTO
      */

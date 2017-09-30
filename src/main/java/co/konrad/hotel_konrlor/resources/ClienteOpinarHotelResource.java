@@ -43,7 +43,7 @@ public class ClienteOpinarHotelResource {
     //investigar expresiones regulares en java
     /**
      * Metodo GET para obtener un solo objeto
-     * @param id
+     * @param id_opinion 
      * @return  List
      */
     @GET
@@ -68,7 +68,7 @@ public class ClienteOpinarHotelResource {
     
     /**
      * Metodo PUT actualizacion ClienteOpinarHotel
-     * @param id
+     * @param id_opinion 
      * @param clienteOpinarHotel
      * @return ClienteOpinarHotelDTO
      */

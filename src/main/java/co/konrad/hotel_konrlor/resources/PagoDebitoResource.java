@@ -43,7 +43,7 @@ public class PagoDebitoResource {
     //investigar expresiones regulares en java
     /**
      * Metodo GET para obtener un solo objeto
-     * @param id
+     * @param id_num_cuenta 
      * @return  List
      */
     @GET
@@ -68,7 +68,7 @@ public class PagoDebitoResource {
     
     /**
      * Metodo PUT actualizacion pagoDebito
-     * @param id
+     * @param id_num_cuenta 
      * @param pagoDebito
      * @return PagoDebitoDTO
      */

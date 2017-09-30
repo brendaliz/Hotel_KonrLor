@@ -43,7 +43,7 @@ public class HabitacionResource {
     //investigar expresiones regulares en java
     /**
      * Metodo GET para obtener un solo objeto
-     * @param id
+     * @param id_Habitacion 
      * @return  List
      */
     @GET
@@ -68,7 +68,7 @@ public class HabitacionResource {
     
     /**
      * Metodo PUT actualizacion habitacion
-     * @param id
+     * @param id_Habitacion 
      * @param habitacion
      * @return HabitacionDTO
      */
