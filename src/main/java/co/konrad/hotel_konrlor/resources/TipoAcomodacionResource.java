@@ -22,7 +22,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author brend
  */
-@Path("/TipoAcomodaciones")
+@Path("/tipoAcomodaciones")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 
@@ -73,8 +73,8 @@ public class TipoAcomodacionResource {
      * @return TipoAcomodacionDTO
      */
     @PUT
-    @Path("{reservaId: \\d+}")
-    public TipoAcomodacionDTO updateTipoAcomodacion(@PathParam("reservaId") Long id_tipo_acomodacion, TipoAcomodacionDTO TipoAcomodacion){
+    @Path("{tipoAcomodacionId: \\d+}")
+    public TipoAcomodacionDTO updateTipoAcomodacion(@PathParam("tipoAcomodacionId") Long id_tipo_acomodacion, TipoAcomodacionDTO TipoAcomodacion){
         TipoAcomodacionEntity TipoAcomodacionEntity = tipoAcomodacionLogic.getTipoAcomodacion(id_tipo_acomodacion);
         if(TipoAcomodacionEntity == null){
             throw new RuntimeException("El Tipo de Acomodacion no existe");
@@ -83,8 +83,8 @@ public class TipoAcomodacionResource {
     }
     
     @DELETE
-    @Path("{reservaId: \\d+}")
-    public void deleteTipoAcomodacion(@PathParam("reservaId") Long id_tipo_acomodacion){
+    @Path("{tipoAcomodacionId: \\d+}")
+    public void deleteTipoAcomodacion(@PathParam("tipoAcomodacionId") Long id_tipo_acomodacion){
         TipoAcomodacionEntity TipoAcomodacionEntity = tipoAcomodacionLogic.getTipoAcomodacion(id_tipo_acomodacion);
         if(TipoAcomodacionEntity == null){
             throw new RuntimeException("El Tipo de Acomodacion no existe");
