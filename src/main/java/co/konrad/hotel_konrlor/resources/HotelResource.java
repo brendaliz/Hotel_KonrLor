@@ -41,7 +41,7 @@ public class HotelResource {
         List<HotelEntity> hoteles = hotelLogic.getHoteles();
         return HotelDTO.toHotelList(hoteles);
     }
-    //investigar expresiones regulares en java
+
     /**
      * Metodo GET para obtener un solo objeto
      * @param id_hotel 

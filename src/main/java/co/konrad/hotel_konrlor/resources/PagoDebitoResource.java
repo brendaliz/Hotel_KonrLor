@@ -40,7 +40,7 @@ public class PagoDebitoResource {
         List<PagoDebitoEntity> pagosDebito = pagoDebitoLogic.getPagosDebito();
         return PagoDebitoDTO.toPagoDebitoList(pagosDebito);
     }
-    //investigar expresiones regulares en java
+
     /**
      * Metodo GET para obtener un solo objeto
      * @param id_num_cuenta 

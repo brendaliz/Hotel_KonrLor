@@ -40,7 +40,7 @@ public class EmpleadoResource {
         List<EmpleadoEntity> empleados = empleadoLogic.getEmpleados();
         return EmpleadoDTO.toEmpleadoList(empleados);
     }
-    //investigar expresiones regulares en java
+
     /**
      * Metodo GET para obtener un solo objeto
      * @param id_empleado 

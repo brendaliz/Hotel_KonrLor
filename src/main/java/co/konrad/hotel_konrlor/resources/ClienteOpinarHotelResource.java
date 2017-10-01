@@ -40,7 +40,7 @@ public class ClienteOpinarHotelResource {
         List<ClienteOpinarHotelEntity> clientesOpinarHoteles = clienteOpinarHotelLogic.getClientesOpinarHoteles();
         return ClienteOpinarHotelDTO.toClienteOpinarHotelList(clientesOpinarHoteles);
     }
-    //investigar expresiones regulares en java
+
     /**
      * Metodo GET para obtener un solo objeto
      * @param id_opinion 

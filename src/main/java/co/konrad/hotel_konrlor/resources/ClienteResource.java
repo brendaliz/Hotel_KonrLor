@@ -41,7 +41,7 @@ public class ClienteResource {
         List<ClienteEntity> clientes = clienteLogic.getClientes();
         return ClienteDTO.toClienteList(clientes);
     }
-    //investigar expresiones regulares en java
+
     /**
      * Metodo GET para obtener un solo objeto
      * @param id_cliente 

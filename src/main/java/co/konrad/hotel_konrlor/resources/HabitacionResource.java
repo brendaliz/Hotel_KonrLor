@@ -40,7 +40,7 @@ public class HabitacionResource {
         List<HabitacionEntity> habitaciones = habitacionLogic.getHabitaciones();
         return HabitacionDTO.toHabitacionList(habitaciones);
     }
-    //investigar expresiones regulares en java
+
     /**
      * Metodo GET para obtener un solo objeto
      * @param id_Habitacion 

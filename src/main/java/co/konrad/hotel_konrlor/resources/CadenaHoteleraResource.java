@@ -41,7 +41,7 @@ public class CadenaHoteleraResource {
         List<CadenaHoteleraEntity> cadenasHoteleras = cadenaHoteleraLogic.getCadenasHoteleras();
         return CadenaHoteleraDTO.toCadenaHoteleraList(cadenasHoteleras);
     }
-    //investigar expresiones regulares en java
+    
     /**
      * Metodo GET para obtener un solo objeto
      * @param id_Cadena_Hotelera 
