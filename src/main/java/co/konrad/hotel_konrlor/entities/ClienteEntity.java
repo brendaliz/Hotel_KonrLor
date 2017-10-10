@@ -45,7 +45,7 @@ public class ClienteEntity implements Serializable{
     @Column (name = "fecha_nacimiento")
     private Date fechaNacimiento;
     
-    @Column (name = "fecha_nacimiento")
+    @Column (name = "pais")
     private String pais;
     
     @Column (name = "ciudad")
