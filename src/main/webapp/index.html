@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Menu</title>
+        <title>Hotel_KonrLor</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Candal|Alegreya+Sans">
         <link rel="stylesheet" type="text/css" href="css/Menu/font-awesome.min.css">
@@ -26,6 +26,7 @@
                         <li><a href="#promocion">Promociones</a></li>
                         <li><a href="#hoteles">Hoteles</a></li>
                         <li><a href="#reservas">Reservas</a></li>
+                        <li><a href="#detalles">Quienes Somos</a></li>
                         <li><a href="#" data-target="#login" data-toggle="modal">Entrar</a></li>
                     </ul>
                 </div>
@@ -43,19 +44,19 @@
                     <div class="modal-body padtrbl">
 
                         <div class="login-box-body">
-                            <p class="login-box-msg">Sign in to start your session</p>
+                            <p class="login-box-msg">Iniciar sesion</p>
                             <div class="form-group">
                                 <form name="" id="loginForm">
                                     <div class="form-group has-feedback">
                                         <!----- username -------------->
-                                        <input class="form-control" placeholder="Username" id="loginid" type="text" autocomplete="off" />
+                                        <input class="form-control" placeholder="Nombre de Usuario" id="loginid" type="text" autocomplete="off" />
                                         <span style="display:none;font-weight:bold; position:absolute;color: red;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginid"></span>
                                         <!---Alredy exists  ! -->
                                         <span class="glyphicon glyphicon-user form-control-feedback"></span>
                                     </div>
                                     <div class="form-group has-feedback">
                                         <!----- password -------------->
-                                        <input class="form-control" placeholder="Password" id="loginpsw" type="password" autocomplete="off" />
+                                        <input class="form-control" placeholder="Contraseña" id="loginpsw" type="password" autocomplete="off" />
                                         <span style="display:none;font-weight:bold; position:absolute;color: grey;position: absolute;padding:4px;font-size: 11px;background-color:rgba(128, 128, 128, 0.26);z-index: 17;  right: 27px; top: 5px;" id="span_loginpsw"></span>
                                         <!---Alredy exists  ! -->
                                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
@@ -64,12 +65,12 @@
                                         <div class="col-xs-12">
                                             <div class="checkbox icheck">
                                                 <label>
-                                                    <input type="checkbox" id="loginrem" > Remember Me
+                                                    <input type="checkbox" id="loginrem" > Recuerdame
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-xs-12">
-                                            <button type="button" class="btn btn-green btn-block btn-flat" onclick="userlogin()">Sign In</button>
+                                            <button type="button" class="btn btn-green btn-block btn-flat" onclick="userlogin()">Entrar</button>
                                         </div>
                                     </div>
                                 </form>
@@ -79,9 +80,58 @@
                 </div>
             </div>
         </div>
-  <script src="./js/Menu_js/jquery.min.js"></script>
-  <script src="./js/Menu_js/jquery.easing.min.js"></script>
-  <script src="./js/Menu_js/bootstrap.min.js"></script>
-  <script src="./js/Menu_js/custom.js"></script>
+        <!--/ Testimonial-->
+        <!--Courses-->
+        <section id="conocenos" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="header-section text-center">
+                        <h2>Quienes somos</h2>
+                        <p>Konrlor es un servicio web de hoteleria encargado de la agregacion y reserva de varios hoteles,</p>
+                        <p>y cadenas hoteleras, el mejor lugar para tener las mejores promociones</p>
+                        <hr class="bottom-line">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 padleft-right">
+                        <figure class="imghvr-fold-up">
+                            <img src="./img/8.jpg" class="img-responsive">
+                            <figcaption>
+                                <h3>Los mejores lugares</h3>
+                                <p>Encuentra los mejores lugares, cerca a lugares turisticos, a un buen precio.</p>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-sm-6 padleft-right">
+                        <figure class="imghvr-fold-up">
+                            <img src="./img/10829147.jpg" class="img-responsive">
+                            <figcaption>
+                                <h3>Servicio</h3>
+                                <p>Contacta a las diferentes cadenas hoteleras, o a nuestros empleados en caso de cualquier duda o inquietud.</p>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 col-sm-6 padleft-right">
+                        <figure class="imghvr-fold-up">
+                            <img src="./img/terraza-del-bar-top-94-casa-dann-carlton-hotel-spa-bogot-colombia_13454880233_o.jpg" class="img-responsive">
+                            <figcaption>
+                                <h3>¿A que estas esperando?</h3>
+                                <p>Registrate, y busca los mejores hoteles que podras encontrar a tu total disposicion.</p>
+                            </figcaption>
+                            <a href="#"></a>
+                        </figure>
+                    </div>
+
+                </div>
+            </div>
+        </section>        
+        <script src="./js/Menu_js/jquery.min.js"></script>
+        <script src="./js/Menu_js/jquery.easing.min.js"></script>
+        <script src="./js/Menu_js/bootstrap.min.js"></script>
+        <script src="./js/Menu_js/custom.js"></script>
     </body>
 </html>
