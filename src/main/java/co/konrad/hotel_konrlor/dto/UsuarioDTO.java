@@ -15,9 +15,8 @@ public class UsuarioDTO {
     
      private Long id_usuario;
      private String nombre;
-     private String apellido;
      private String contraseña;
-     private double avatar;
+     private boolean avatar;
      private String correo;
      
      public UsuarioDTO() {
@@ -26,9 +25,8 @@ public class UsuarioDTO {
     public UsuarioDTO(UsuarioEntity usuarioEntity) {
         this.id_usuario = usuarioEntity.getId_usuario();
         this.nombre = usuarioEntity.getNombre();
-        this.apellido = usuarioEntity.getApellido();
         this.contraseña = usuarioEntity.getContraseña();
-        this.avatar = usuarioEntity.getAvatar();
+        this.avatar = usuarioEntity.isAvatar();
         this.correo = usuarioEntity.getCorreo();
 
     }
@@ -37,7 +35,6 @@ public class UsuarioDTO {
         UsuarioEntity usuario = new UsuarioEntity();
         usuario.setId_usuario(this.id_usuario);
         usuario.setNombre(this.nombre);
-        usuario.setApellido(this.apellido);
         usuario.setContraseña(this.contraseña);
         usuario.setAvatar(this.avatar);
         usuario.setCorreo(this.correo);

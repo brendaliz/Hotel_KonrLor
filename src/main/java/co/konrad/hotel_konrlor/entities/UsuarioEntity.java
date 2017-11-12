@@ -28,15 +28,12 @@ public class UsuarioEntity implements Serializable{
     
     @Column(name = "nombre_usuario", nullable = false)
     private String nombre;
-     
-    @Column(name = "apellido_usuario", nullable = false)
-    private String apellido;
     
     @Column (name = "contraseña")
     private String contraseña;
     
     @Column (name = "avatar")
-    private double avatar;
+    private boolean avatar;
     
     @Column (name = "correo")
     private String correo;
@@ -57,28 +54,12 @@ public class UsuarioEntity implements Serializable{
         this.nombre = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
     public String getContraseña() {
         return contraseña;
     }
 
     public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
-    }
-
-    public double getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(double avatar) {
-        this.avatar = avatar;
     }
 
     public String getCorreo() {
@@ -89,7 +70,12 @@ public class UsuarioEntity implements Serializable{
         this.correo = correo;
     }
 
-    
-    
-    
+    public boolean isAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(boolean avatar) {
+        this.avatar = avatar;
+    }
+ 
 }
