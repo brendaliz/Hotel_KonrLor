@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:200,400|Playfair+Display');
+body {
+  background-image: linear-gradient(190deg, rgba(0, 0, 99, .05) 10%, rgba(0, 0, 255, .19) 100%);
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  float: left;
+  width: 30%;
+  min-width: 300px;
+  background-color: #f1f1f1;
+  margin: 1.5%;
+  padding: 2em 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.12), 0 3px 5px rgba(0, 0, 0, 0.24);
+  text-align: center;
+}
+.wrapper>h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 200;
+  font-size: 1.5em;
+  letter-spacing: .15em;
+  color: #333;
+}
+.details {
+  width: 95%;
+  margin: 0 auto 2em;
+  padding-top: 10.5em;
+  padding-bottom: 1em;
+  background-color: #FFEBC8;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.24);
+  transition: all ease-in 0.15s;
+}
+
+.wrapper:hover .details{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 5px rgba(0,0,0,0.22);
+  transform: translate(0px, -2px) scale(1.01);
+}
+
+.details>h1 {
+  font-family: "Playfair Display";
+  font-size: 1em;
+}
+.details>h2 {
+  font-family: sans-serif;
+  font-size: 1.4em;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+}
+.details>p {
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: 200;
+}
+
+.image{
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  height: 250px;
+  margin: 0 auto -10em;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
+  transition: all ease-in .15s;
+}
+.wrapper:hover .image{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: translate(0px, -3px) scale(1.02);
+}
+  
+.i1{
+    background-image: url(http://www.catering.com.co/wp-content/uploads/2017/03/bluedoors-medellin03.jpg);
+}
+.i2 {
+  background-image: url(http://www.hotelesestelar.com/eng/wp-content/uploads/slideshow-gallery/EST_Parque_fachada_1.jpg);
+}
+.i3 {
+  background-image: url(http://cdn.wego.com/gazo/23/0495f0536c5501a9fb32181b9b40c5ab9b908534/2660985_J.jpg);
+  }
+
+.i4{
+    background-image: url(http://www.semanadelaotologia.com/ckfinder/userfiles/images/royal.jpg);
+}
+.i5 {
+  background-image: url(https://images.bestday.com/_lib/vimages/Tijuana/Hotels/Marriott-Tijuana/Fachada_xl.jpg);
+}
+.i6 {
+  background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/01/d9/4e/6a/hotel-exterior-view.jpg);
+  }
+
+
+@media screen and (max-width: 1000px) {
+  .wrapper{
+    width: 47%;
+  }
+}
+@media screen and(max-width:700px){
+  .wrapper{
+    float: none;
+    width: 70%;
+    margin: 1em auto;
+  }
+}
+@media screen and(max-width:700px){
+  .wrapper{
+    float: none;
+    width: 70%;
+    margin: 1em auto;
+  }
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+header, nav, section, article, aside, footer, hgroup, body{
+    display: block;
+  margin:0; padding:0;
+}
+
+body{
+  background: #e6e7e8;
+  color: #333;
+  font-family: "Roboto",arial,basic;
+  font-size: 15px;
+  margin: auto;
+}
+a {
+    color: #0a98c1;
+    text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+ul {		margin:0;	padding:0;}
+li{		list-style: none;	}
+.largeur{
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+.left{float: left;}
+.right{float: right;}
+.col-30{width: 30%;}
+.col-25{width: 25%;}
+.col-20{width: 20%;}
+.col-75{width: 75%;}
+.col-70{width: 70%;}
+.pad5{padding: 5px;}
+.pad15{padding: 15px;}
+.center{text-align: center}
+.txtRight{text-align: right}
+.gris{color:#888;}
+/**/
+form{display: block;}
+input{border: 1px solid #ccc;
+box-shadow: 0 1px 2px #eee inset;
+padding: 2px 6px;
+font-size:16px;
+height: 24px;
+  width: 300px;
+}
+button{
+ 
+  background: #cc181e;
+  color: #fff;
+  border:0;
+  font-weight: bold;
+}
+/***/
+#header{
+  background: #fff;
+  color: #333;
+  height:65px;
+  line-height: 65px;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 20px;
+}
+#header{display: none; }/* aeff*/
+.cadre{
+  background: #fff;
+  box-shadow: 0 3px 5px rgba(51, 51, 51, 0.3);
+}
+/*Filtre*/
+h2,h3,h4,h5{padding:0; margin:0;}
+.filtre-titre{
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+}
+.filtre-titre h3{
+  text-align: center;
+  line-height: 45px;
+}
+.section h4{margin-bottom: 14px;}
+.section {border-bottom: 1px solid #ccc;}
+
+/**RESULTATS*/
+.barre-tri{
+  height: 35px;
+line-height: 35px;
+padding: 0 5px;}
+
+.apercu{  height: 150px;}
+.apercu h3{font-size: 22px;}
+
+
+.apercu img{  max-height: 100%;}
+
+.h100{height: 100%;}
+.l100{width: 100%;}
+
+.btn2 {
+    background-color: #66a400;
+    color: #ffffff;
+    cursor: pointer;
+  font-size: 16px;
+  line-height: 35px;
+  font-weight: 500;
+}
+.lieu{
+  margin-bottom: 5px;
+}
+
+/******************/
+
+
+.et-3{display: block; width: 50px;
+margin-bottom:20px;
+  height: 18px;
+  content:"";}
+.etoile{
+  background: rgba(0, 0, 0, 0) url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2213%22%20height%3D%2212%22%20viewBox%3D%220%200%2013%2012%22%3E%3Cpath%20d%3D%22M11.983%2C5.211a0.667%2C0.667%2C0%2C0%2C0-.545-0.534l-3.6-.6L6.626%2C0.457a0.665%2C0.665%2C0%2C0%2C0-1.263%2C0L4.155%2C4.077l-3.6.6A0.666%2C0.666%2C0%2C0%2C0%2C.319%2C5.9L3.195%2C7.631%2C2.029%2C11.124a0.666%2C0.666%2C0%2C0%2C0%2C1.047.732L5.995%2C9.521l2.917%2C2.334a0.667%2C0.667%2C0%2C0%2C0%2C1.049-.732L8.8%2C7.629%2C11.671%2C5.9a0.662%2C0.662%2C0%2C0%2C0%2C.312-0.694h0v0Z%22%20fill%3D%22%23f6ab3f%22%2F%3E%3C%2Fsvg%3E") repeat-x scroll left center / 13px 12px
+}
