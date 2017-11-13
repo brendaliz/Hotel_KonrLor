@@ -29,8 +29,8 @@ public class UsuarioEntity implements Serializable{
     @Column(name = "nombre_usuario", nullable = false)
     private String nombre;
     
-    @Column (name = "contraseña")
-    private String contraseña;
+    @Column (name = "password")
+    private String password;
     
     @Column (name = "avatar")
     private boolean avatar;
@@ -54,14 +54,6 @@ public class UsuarioEntity implements Serializable{
         this.nombre = nombre;
     }
 
-    public String getContraseña() {
-        return contraseña;
-    }
-
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
-    }
-
     public String getCorreo() {
         return correo;
     }
@@ -76,6 +68,14 @@ public class UsuarioEntity implements Serializable{
 
     public void setAvatar(boolean avatar) {
         this.avatar = avatar;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
  
 }

@@ -13,8 +13,8 @@
                //Crear una variable por cada division/columna de la tabla
                var nombreUsuario = $('<td>');
                nombreUsuario.text(data[i].nombre);
-               var contraseña = $('<td>');
-               contraseña.text(data[i].contraseña);
+               var password = $('<td>');
+               password.text(data[i].password);
                var correo = $('<td>');
                correo.text(data[i].correo);
                
@@ -23,7 +23,7 @@
                //Se crea un atributo que realiza el transporte de datos
                //data-'cualquierNombre'
                botonEliminar.text('Eliminar').attr('data-id', data[i].id);
-               var botonActualizar = $('<a href="/Prueba1/usuarioCreate.html?id='+ data[i].id+'">').addClass('btn btn-primary');
+               var botonActualizar = $('<a href="/Hotel_KonrLor/usuarioCreate.html?id='+ data[i].id+'">').addClass('btn btn-primary');
                botonActualizar.text('Actualizar');
                
                botonEliminar.click(eliminar);
@@ -31,8 +31,8 @@
                acciones.append(botonEliminar);
                
                //Agregar las columnas a la fila
-               tableRow.append(nombre);
-               tableRow.append(contraseña);
+               tableRow.append(nombreUsuario);
+               tableRow.append(password);
                tableRow.append(correo);
                tableRow.append(acciones); 
                

@@ -24,20 +24,20 @@
             dataType:'json'
         }).done(function(data){
             var nombre = $('#nombre').val(data.nombre);
-            var contraseña = $('#contraseña').val(data.patrocinador);
-            var correo = $('#correo').val(data.duracionDias/*nombre que le dimos en DTO*/);
+            var password = $('#password').val(data.password);
+            var correo = $('#correo').val(data.correo/*nombre que le dimos en DTO*/);
             var id= data.id;
             
             $('#crearBoton').text('Actualizar Usuario').click(function(event){
             var nombre = $('#nombre').val();
-            var contraseña = $('#contraseña').val();
+            var password = $('#password').val();
             var correo = $('#correo').val(/*nombre que le dimos en DTO*/);
             $.ajax({
                url: '/Hotel_KonrLor/api/Usuarios/'+id,
                method:'PUT',
                data: JSON.stringify({
                    nombre: nombre,
-                    contraseña: contraseña,
+                    password: password,
                     correo: correo,
                     id:id
                }),
@@ -56,7 +56,7 @@
         //Codigo crear
         $('#crearBoton').click(function (event) {
             var nombre = $('#nombre').val();
-            var contraseña = $('#contraseña').val();
+            var password = $('#password').val();
             var correo = $('#correo').val();
 
             $.ajax({
@@ -64,13 +64,55 @@
                 method: 'POST',
                 data: JSON.stringify({
                     nombre: nombre,
-                    contraseña: contraseña,
+                    password: password,
                     correo: correo
                 }),
                 contentType: 'application/json',
                 dataType: 'json'
             }).done(function (data) {
-                window.location.href = '/Hotel_KonrLor';
+                window.location.href = '/Hotel_KonrLor/clienteCreate.html';
+            }).fail(function (xhr, status, error) {
+                console.log(error);
+            });
+        });
+        $('#crearCadBoton').click(function (event) {
+            var nombre = $('#nombre').val();
+            var password = $('#password').val();
+            var correo = $('#correo').val();
+
+            $.ajax({
+                url: '/Hotel_KonrLor/api/Usuarios',
+                method: 'POST',
+                data: JSON.stringify({
+                    nombre: nombre,
+                    password: password,
+                    correo: correo
+                }),
+                contentType: 'application/json',
+                dataType: 'json'
+            }).done(function (data) {
+                window.location.href = '/Hotel_KonrLor/cadenaHotCreate.html';
+            }).fail(function (xhr, status, error) {
+                console.log(error);
+            });
+        });
+        $('#crearHotBoton').click(function (event) {
+            var nombre = $('#nombre').val();
+            var password = $('#password').val();
+            var correo = $('#correo').val();
+
+            $.ajax({
+                url: '/Hotel_KonrLor/api/Usuarios',
+                method: 'POST',
+                data: JSON.stringify({
+                    nombre: nombre,
+                    password: password,
+                    correo: correo
+                }),
+                contentType: 'application/json',
+                dataType: 'json'
+            }).done(function (data) {
+                window.location.href = '/Hotel_KonrLor/hotelCreate.html';
             }).fail(function (xhr, status, error) {
                 console.log(error);
             });
