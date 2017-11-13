@@ -25,7 +25,7 @@ public class HotelEntity implements Serializable{
     
     @Id
     @Column(name="id_hotel")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id_hotel;
     
     @Column(name = "nombre_Hotel", nullable =false)
@@ -52,7 +52,7 @@ public class HotelEntity implements Serializable{
     @Column(name="disponibilidad_hotel")
     private boolean disponibilidad;
     
-    @ManyToOne
+    @ManyToOne(optional=true)
     @JoinColumn(name = "id_cadena_Hotelera")
     private CadenaHoteleraEntity cadenaHotelera;
 

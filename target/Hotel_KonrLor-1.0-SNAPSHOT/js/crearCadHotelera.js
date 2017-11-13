@@ -25,7 +25,7 @@
             var telefono = $('#telefono').val(data.numero_Telefono);
             var correo = $('#correo').val(data.correo_Electronico);
             var direccion = $('#direccion').val(data.direccion_Atencion_Cliente);
-            var nit= $('$nit').val(data.id_cadena_hotelera);
+            var id= $('$nit').val(data.id_cadena_hotelera);
             $('#crearBoton').text('Actualizar Usuario').click(function(event){
             var nom_cadena = $('#nom_cadena').val();
             var telefono = $('#telefono').val();
@@ -40,7 +40,7 @@
                     telefono: telefono,
                     correo: correo,
                     direccion: direccion,
-                    id:id
+                    id_cadena_hotelera:id
                }),
                contentType: 'application/json',
                dataType: 'json'                
@@ -70,7 +70,7 @@
                     telefono: telefono,
                     correo: correo,
                     direccion: direccion,
-                    id:id
+                    id_cadena_hotelera:id
                 }),
                 contentType: 'application/json',
                 dataType: 'json'
