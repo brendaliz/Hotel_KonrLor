@@ -18,7 +18,7 @@
     if(getURLParameter('id')){
         //Codigo Actualizar
         $.ajax({
-            url: '/Hotel_KonrLor/api/Usuarios' + getURLParameter("id"),
+            url: '/Hotel_KonrLor/api/Usuarios/' + getURLParameter("id"),
             method: 'GET',
             contentType: 'application/json',
             dataType:'json'
@@ -33,7 +33,7 @@
             var contraseña = $('#contraseña').val();
             var correo = $('#correo').val(/*nombre que le dimos en DTO*/);
             $.ajax({
-               url: '/Hotel_KonrLor/api/Usuarios'+id,
+               url: '/Hotel_KonrLor/api/Usuarios/'+id,
                method:'PUT',
                data: JSON.stringify({
                    nombre: nombre,
