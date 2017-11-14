@@ -27,7 +27,7 @@ public class CadenaHoteleraPersistence {
     }
     
     public List<CadenaHoteleraEntity> findAll() {
-        Query q = emCadenaHotelera.createQuery("select cu from CadenaHotelera cu");
+        Query q = emCadenaHotelera.createQuery("select cu from CadenaHoteleraEntity cu");
         return q.getResultList();
     }
     

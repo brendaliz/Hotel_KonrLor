@@ -24,19 +24,19 @@ public class CadenaHoteleraEntity implements Serializable{
     
     @Id
     @Column(name = "id_cadena_hotelera")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id_cadena_hotelera;
     
-    @Column(name = "nombre_cadena_hotelera")
+    @Column(name = "nombre_Cadena")
     private String nombre_Cadena;
     
-    @Column(name = "telefono_cadena_hotelera")
+    @Column(name = "numero_Telefono")
     private int numero_Telefono;
     
-    @Column(name = "correo_cadena_hotelera")
+    @Column(name = "correo_Electronico")
     private String correo_Electronico;
     
-    @Column(name = "direccion_cadena_hotelera")
+    @Column(name = "direccion_Atencion_Cliente")
     private String direccion_Atencion_Cliente;
 
     public long getNit_Cadena_Hotelera() {

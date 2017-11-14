@@ -25,7 +25,7 @@
             var telefono = $('#telefono').val(data.numero_Telefono);
             var correo = $('#correo').val(data.correo_Electronico);
             var direccion = $('#direccion').val(data.direccion_Atencion_Cliente);
-            var id= $('$nit').val(data.id_cadena_hotelera);
+            var id= $('$id_cadena_hotelera').val(data.id_cadena_hotelera);
             $('#crearBoton').text('Actualizar Usuario').click(function(event){
             var nom_cadena = $('#nom_cadena').val();
             var telefono = $('#telefono').val();
@@ -55,8 +55,8 @@
         });
     }else{
         //Codigo crear
-        $('#crearBoton').click(function (event) {
-            var nombre_cadena = $('#nombre_cadena').val();
+        $('#crearCadBoton').click(function (event) {
+            var nombre_Cadena = $('#nombre_Cadena').val();
             var numero_Telefono = $('#numero_Telefono').val();
             var correo_Electronico = $('#correo').val(/*nombre que le dimos en DTO*/);
             var direccion_Atencion_Cliente = $('#direccion_Atencion_Cliente').val();
@@ -66,7 +66,7 @@
                 url: '/Hotel_KonrLor/api/cadenasHoteleras',
                 method: 'POST',
                 data: JSON.stringify({
-                   nombre_cadena: nombre_cadena,
+                   nombre_Cadena: nombre_Cadena,
                     numero_Telefono: numero_Telefono,
                     correo_Electronico: correo_Electronico,
                     direccion_Atencion_Cliente: direccion_Atencion_Cliente,
