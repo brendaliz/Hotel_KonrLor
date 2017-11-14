@@ -1,57 +1,89 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>Hotel_KonrLor</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-        <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/pulse/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/signIn.css">
+        <link rel="stylesheet" href="./css/reserva.css">
         <link rel="icon" type="image/png" href="./img/iconoK.png" />
-        <script src="./js/vendor/jquery-2.2.4.js" type="text/javascript"></script>        
-
+        <script src="./js/vendor/jquery-2.2.4.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Roboto:400,300,500,700|Lato:400,300,700|Raleway:400,300,700,600|Open+Sans+Condensed:300,700|Asap:400,700|Merriweather+Sans:400,700,300' rel='stylesheet' type='text/css'>
     </head>
+
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="index.html">KonrLor</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="">Reserva</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
-                            Reservas
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="realizarReservas.html">Realizar Reservas</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="reservasRealizadas.html">Reservas Realizadas</a>
-                        </div>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Volver</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./Hoteles.html">Hoteles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Promociones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Quienes somos</a>
-                    </li>
-                    <li class="nav-item my-2 my-lg-0">
-                        <a href="./InicioSesion.html" class="nav-link" data-toogle="modal" data-target="#ejemplo">Entrar</a>
-                    </li>
-                    <li class="nav-item my-2 my-lg-0">
-                        <a href="./registro.html" class="nav-link">Registrarse</a>
-                    </li>
-
                 </ul>
             </div>
         </nav>
 
+        <div class="content">
+            <h1><a>Reserva</a></h1>
+        </div>
 
-        <section class="hero-unit">
-            Entro a Realizar Reservas
-        </section>        
+        <div id="contenedor">
+  <div class="titulo">Reserva del hotel </div>
+  <form action="send.php" method="post" name="registro" accept-charset="UTF-8">
+    <div id="formulario1">
+
+      <input name="Nombre" type="text" required placeholder="Nombre" checked/>
+
+      <input name="Apellidos" type="text" required placeholder="Apellido" checked/>
+
+      <input name="Correo" type="text" required placeholder="E-mail" />
+
+      <input name="Movil" type="text" minlength="9" required placeholder="Telefono movil" />
+
+    </div>
+    <div id="formulario2">
+      <div class="titulo">Datos de Cuenta</div>
+      <input name="nombre de usuario" type="text" pattern="[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*" placeholder="Nombre de Usuario" required />
+      <input name="pass1" type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$" placeholder="Contraseña" required/>
+      <input name="pass2" type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$" placeholder="Verificar contraseña" required/>
+    </div>
+    <div id="formulario3">
+      <div class="titulo">Datos de Pago</div>
+   
+      
+      <input name="Tipo de Tarjeta" type="text" pattern="/^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/" placeholder="Tipo de Tarjeta" required/>
+      <input name="numero de tarjeta" type="text" pattern="/^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/" placeholder="Numero de Tarjeta" required/>
+    </div>
+
+    <input type="submit" value="Terminar y Enviar" />
+  </form>
+
+</div>
+<div id="informacion">
+  <details>
+    <summary>Terminos y Condiciones</summary>
+    <aside>
+      <ul>
+        <li>Identificacion
+          <p>Para poder comprar productos en el Sitio Web los clientes deben: (a)<strong> tener al menos 18 años</strong> o, si son menores de edad, estar debidamente autorizados por su tutor legal, (b) ser consumidores, entendiendo como tales personas físicas
+            que actúan con fines ajenos a su industria, oficio, negocio y profesión (c) registrarse en el Sitio Web; y (d) tener una tarjeta de crédito en vigor.</p>
+        </li>
+        <li>Precios
+          <p>
+            Todos los precios indicados para la reserva de hoteles que están disponibles a través del Sitio Web incluyen el IVA a los tipos vigentes y están denominados en dolares.
+          </p>
+        </li>
+        <li>Opciones de pago
+          <p>El cliente puede pagar los productos mediante tarjeta de crédito. Se aceptan a tal efecto las siguientes tarjetas de crédito: <br /> - Visa <br /> - MasterCard <br /> -PayPal <br /> -Bitcoin <br /> -Skrill <br /> -WebMoney</p>
+        </li>
+      </ul>
+    </aside>
+  </details>
+</div>
     </body>
+
 </html>
