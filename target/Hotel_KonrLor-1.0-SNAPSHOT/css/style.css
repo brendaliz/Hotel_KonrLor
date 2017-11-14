@@ -11,7 +11,10 @@ a:hover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  text-align: center;
+  padding: 10px;
 }
+
 .hero-unit h1,
 .hero-unit h2,
 .hero-unit h3,
@@ -34,6 +37,17 @@ a:hover {
   font-size: 2rem;
   color: white;
 }
+
+.entrar{
+    position: absolute;
+    right: 130px;
+}
+
+.registro{
+    position: absolute;
+    right: 12px;
+}
+
 .hero-unit .clients {
   margin: 2rem auto;
 }
