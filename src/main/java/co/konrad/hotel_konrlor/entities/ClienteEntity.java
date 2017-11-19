@@ -29,20 +29,20 @@ public class ClienteEntity implements Serializable{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id_cliente;
     
-    @Column(name = "nombre_cliente", nullable = false)
+    @Column(name = "nombre", nullable = false)
     private String nombre;
      
-    @Column(name = "apellido_cliente", nullable = false)
+    @Column(name = "apellido", nullable = false)
     private String apellido;
     
     @Column (name = "documento")
     private int documento;
     
-    @Column (name = "direccion_cliente")
+    @Column (name = "direccion")
     private String direccion;
     
     @Temporal(TemporalType.DATE)
-    @Column (name = "fecha_nacimiento")
+    @Column (name = "fechaNacimiento")
     private Date fechaNacimiento;
     
     @Column (name = "pais")
@@ -62,7 +62,7 @@ public class ClienteEntity implements Serializable{
     private PagoEntity tipo_pago;
     
     @ManyToOne
-    @JoinColumn (name = "id_usuario")
+    @JoinColumn (name = "usuario")
     private UsuarioEntity usuario;
 
     public Long getId_cliente() {

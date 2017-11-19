@@ -29,7 +29,7 @@ public class CadenaHoteleraDTO {
     }
 
     public CadenaHoteleraDTO(CadenaHoteleraEntity cadenaHoteleraEntity) {
-        this.id_cadena_hotelera = cadenaHoteleraEntity.getNit_Cadena_Hotelera();
+        this.id_cadena_hotelera = cadenaHoteleraEntity.getId_cadena_hotelera();
         this.nombre_Cadena = cadenaHoteleraEntity.getNombre_Cadena();
         this.numero_Telefono = cadenaHoteleraEntity.getNumero_Telefono();
         this.correo_Electronico = cadenaHoteleraEntity.getCorreo_Electronico();
@@ -38,7 +38,7 @@ public class CadenaHoteleraDTO {
     
     public CadenaHoteleraEntity toEntity(){
         CadenaHoteleraEntity cadenaHotelera = new CadenaHoteleraEntity();
-        cadenaHotelera.setNit_Cadena_Hotelera(this.id_cadena_hotelera);
+        cadenaHotelera.setId_cadena_hotelera(this.id_cadena_hotelera);
         cadenaHotelera.setNombre_Cadena(this.nombre_Cadena);
         cadenaHotelera.setNumero_Telefono(this.numero_Telefono);
         cadenaHotelera.setCorreo_Electronico(this.correo_Electronico);

@@ -39,12 +39,12 @@ public class CadenaHoteleraEntity implements Serializable{
     @Column(name = "direccion_Atencion_Cliente")
     private String direccion_Atencion_Cliente;
 
-    public long getNit_Cadena_Hotelera() {
+    public long getId_cadena_hotelera() {
         return id_cadena_hotelera;
     }
 
-    public void setNit_Cadena_Hotelera(long nit_Cadena_Hotelera) {
-        this.id_cadena_hotelera = nit_Cadena_Hotelera;
+    public void setId_cadena_hotelera(long id_cadena_hotelera) {
+        this.id_cadena_hotelera = id_cadena_hotelera;
     }
 
     public String getNombre_Cadena() {
@@ -77,5 +77,6 @@ public class CadenaHoteleraEntity implements Serializable{
 
     public void setDireccion_Atencion_Cliente(String direccion_Atencion_Cliente) {
         this.direccion_Atencion_Cliente = direccion_Atencion_Cliente;
-    }    
+    }
+
 }

@@ -74,6 +74,7 @@
     }else{
         //Codigo crear
         $('#crearBoton').click(function (event) {
+            console.log('Paparapa');
             var nombre = $('#nombre').val();
             var tipo = $('#tipo_hotel').val();
             var categoria = $('#categoria').val(/*nombre que le dimos en DTO*/);
@@ -82,7 +83,7 @@
             var ciudad = $('#ciudad').val();
             var pais = $('#pais').val();
             var disponibilidad = $('#disponibilidad').val();
-            var id = $('#id_hotel').val();
+            var id_hotel = $('#id_hotel').val();
 
             $.ajax({
                 url: '/Hotel_KonrLor/api/hoteles',
@@ -96,7 +97,7 @@
                     ciudad: ciudad,
                     pais: pais,
                     disponibilidad: disponibilidad,
-                    id_hotel: id
+                    id_hotel: id_hotel
                 }),
                 contentType: 'application/json',
                 dataType: 'json'

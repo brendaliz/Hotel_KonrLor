@@ -40,8 +40,8 @@
             
             var pais = $('#pais').val();
             var ciudad = $('#ciudad').val();
-            var telefono = $('$telefono').val();
-            var celular = $('celular').val();
+            var telefono = $('#telefono').val();
+            var celular = $('#celular').val();
             $.ajax({
                url: '/Hotel_KonrLor/api/clientes/'+id,
                method:'PUT',
@@ -75,12 +75,12 @@
             var apellido = $('#apellido').val();
             var documento = $('#documento').val(/*nombre que le dimos en DTO*/);
             var direccion = $('#direccion').val();
-            
+            var fechaNacimiento = $('#fechaNacimiento').val();
             var pais = $('#pais').val();
             var ciudad = $('#ciudad').val();
-            var telefono = $('$telefono').val();
-            var celular = $('celular').val();
-
+            var telefono = $('#telefono').val();
+            var celular = $('#celular').val();
+            console.log('Pepe');
             $.ajax({
                 url: '/Hotel_KonrLor/api/clientes',
                 method: 'POST',
@@ -89,7 +89,7 @@
                     apellido: apellido,
                     documento: documento,
                     direccion: direccion,
-                    
+                    fechaNacimiento: fechaNacimiento,
                     pais: pais,
                     ciudad: ciudad,
                     telefono: telefono,
@@ -104,4 +104,4 @@
             });
         });        
     }    
-});
+})(jQuery);

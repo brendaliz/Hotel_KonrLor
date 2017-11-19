@@ -2,7 +2,7 @@
    $(document).ready(function(){
        //Consumir el servicio GET de festivales
        $.ajax({
-           url:'/Hotel_KonrLor/api/Usuarios',
+           url:'/Hotel_KonrLor/api/cadenasHoteleras',
            method:'GET',
            contentType: 'application/json',
            dataType: 'json'

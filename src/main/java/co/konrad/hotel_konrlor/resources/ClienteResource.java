@@ -85,7 +85,7 @@ public class ClienteResource {
     
     @DELETE
     @Path("{clienteId: \\d+}")
-    public void deleteCliente(@PathParam("cleinteId") Long id_cliente){
+    public void deleteCliente(@PathParam("clienteId") Long id_cliente){
         ClienteEntity clienteEntity = clienteLogic.getCliente(id_cliente);
         if(clienteEntity == null){
             throw new RuntimeException("El cliente no existe");
