@@ -42,8 +42,8 @@ public class ClienteEntity implements Serializable{
     private String direccion;
     
     @Temporal(TemporalType.DATE)
-    @Column (name = "fechaNacimiento")
-    private Date fechaNacimiento;
+    @Column (name = "fecha_Nacimiento")
+    private Date fecha_Nacimiento;
     
     @Column (name = "pais")
     private String pais;
@@ -105,13 +105,7 @@ public class ClienteEntity implements Serializable{
         this.direccion = direccion;
     }
 
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
-    }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
 
     public String getPais() {
         return pais;
@@ -159,6 +153,14 @@ public class ClienteEntity implements Serializable{
 
     public void setUsuario(UsuarioEntity usuario) {
         this.usuario = usuario;
+    }
+
+    public Date getFecha_Nacimiento() {
+        return fecha_Nacimiento;
+    }
+
+    public void setFecha_Nacimiento(Date fecha_Nacimiento) {
+        this.fecha_Nacimiento = fecha_Nacimiento;
     }
     
     

@@ -25,19 +25,19 @@
             var apellido = $('#apellido').val(data.apellido);
             var documento = $('#documento').val(data.documento);
             var direccion = $('#direccion').val(data.direccion);
-            
+            var fecha_Nacimiento = $('#fecha_Nacimiento').val(data.fecha_Nacimiento);
             var pais = $('#pais').val(data.pais);
             var ciudad = $('#ciudad').val(data.ciudad/*nombre que le dimos en DTO*/);
             var telefono= $('#telefono').val(data.telefono);
             var celular = $('celular').val(data.celular);
             var id= data.id;
             
-            $('#crearBoton').text('Actualizar Usuario').click(function(event){
+            $('#crearBoton').text('Actualizar Cliente').click(function(event){
             var nombre = $('#nombre').val();
             var apellido = $('#apellido').val();
             var documento = $('#documento').val(/*nombre que le dimos en DTO*/);
             var direccion = $('#direccion').val();
-            
+            var fecha_Nacimiento = $('#fecha_Nacimiento').val();            
             var pais = $('#pais').val();
             var ciudad = $('#ciudad').val();
             var telefono = $('#telefono').val();
@@ -50,7 +50,7 @@
                     apellido: apellido,
                     documento: documento,
                     direccion: direccion,
-                    
+                    fecha_Nacimiento: fecha_Nacimiento,
                     pais: pais,
                     ciudad: ciudad,
                     telefono: telefono,
@@ -75,7 +75,7 @@
             var apellido = $('#apellido').val();
             var documento = $('#documento').val(/*nombre que le dimos en DTO*/);
             var direccion = $('#direccion').val();
-            var fechaNacimiento = $('#fechaNacimiento').val();
+            var fecha_Nacimiento = $('#fecha_Nacimiento').val();
             var pais = $('#pais').val();
             var ciudad = $('#ciudad').val();
             var telefono = $('#telefono').val();
@@ -89,7 +89,7 @@
                     apellido: apellido,
                     documento: documento,
                     direccion: direccion,
-                    fechaNacimiento: fechaNacimiento,
+                    fecha_Nacimiento: fecha_Nacimiento,
                     pais: pais,
                     ciudad: ciudad,
                     telefono: telefono,

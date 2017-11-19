@@ -21,8 +21,8 @@
                documento.text(data[i].documento);
                var direccion = $('<td>');
                direccion.text(data[i].direccion);
-               var fechaNacimiento = $('<td>');
-               fechaNacimiento.text(data[i].fechaNacimiento);
+               var fecha_Nacimiento = $('<td>');
+               fecha_Nacimiento.text(data[i].fecha_Nacimiento);
                var pais = $('<td>');
                pais.text(data[i].pais);
                var ciudad = $('<td>');
@@ -44,11 +44,15 @@
                acciones.append(botonEliminar);
                
                //Agregar las columnas a la fila
-               tableRow.append(nombreUsuario);
-               tableRow.append(password);
-               tableRow.append(correo);
-               tableRow.append(acciones); 
-               
+               tableRow.append(nombre);
+               tableRow.append(apellido);
+               tableRow.append(documento);
+               tableRow.append(direccion); 
+               tableRow.append(fecha_Nacimiento); 
+               tableRow.append(pais); 
+               tableRow.append(ciudad);
+               tableRow.append(telefono); 
+               tableRow.append(celular); 
                console.log($('#tFestivales table tbody'));
                $('#tFestivales table tbody').append(tableRow);
            }
@@ -62,7 +66,7 @@
    
    function eliminar(event){
        $.ajax({
-           url: '/Hotel_KonrLor/api/Usuarios' +$(this).attr('data-id'),
+           url: '/Hotel_KonrLor/api/clientes' +$(this).attr('data-id'),
            method: 'DELETE',
            contentType: 'application/json',
            dataType: 'json'

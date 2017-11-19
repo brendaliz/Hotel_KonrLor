@@ -26,7 +26,7 @@ public class ClienteDTO {
     
     private String direccion;
     
-    private Date fechaNacimiento;
+    private Date fecha_Nacimiento;
     
     private String pais;
     
@@ -49,7 +49,7 @@ public class ClienteDTO {
         this.apellido = clienteEntity.getApellido();
         this.documento = clienteEntity.getDocumento();
         this.direccion = clienteEntity.getDireccion();
-        this.fechaNacimiento = clienteEntity.getFechaNacimiento();
+        this.fecha_Nacimiento = clienteEntity.getFecha_Nacimiento();
         this.pais = clienteEntity.getPais();
         this.ciudad = clienteEntity.getCiudad();
         this.telefono = clienteEntity.getTelefono();
@@ -65,7 +65,7 @@ public class ClienteDTO {
         cliente.setApellido(this.apellido);
         cliente.setDocumento(this.documento);
         cliente.setDireccion(this.direccion);
-        cliente.setFechaNacimiento(this.fechaNacimiento);
+        cliente.setFecha_Nacimiento(this.fecha_Nacimiento);
         cliente.setPais(this.pais);
         cliente.setCiudad(this.ciudad);
         cliente.setTelefono(this.telefono);
@@ -123,14 +123,6 @@ public class ClienteDTO {
         this.direccion = direccion;
     }
 
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
-    }
-
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
-
     public String getPais() {
         return pais;
     }
@@ -177,6 +169,14 @@ public class ClienteDTO {
 
     public void setUsuario(UsuarioEntity usuario) {
         this.usuario = usuario;
+    }
+
+    public Date getFecha_Nacimiento() {
+        return fecha_Nacimiento;
+    }
+
+    public void setFecha_Nacimiento(Date fecha_Nacimiento) {
+        this.fecha_Nacimiento = fecha_Nacimiento;
     }
     
     
