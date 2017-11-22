@@ -25,7 +25,7 @@ public class ReservaDTO {
     private Date fechaSalida;
     private int valor_reserva;
     private HotelEntity hotel;
-    private EmpleadoEntity empleado;
+    //private EmpleadoEntity empleado;
     private ClienteEntity cliente;
     private PagoEntity tipo_pago;
 
@@ -38,7 +38,7 @@ public class ReservaDTO {
         this.fechaSalida = reservaEntity.getFechaSalida();
         this.valor_reserva = reservaEntity.getValor_reserva();
         this.hotel = reservaEntity.getHotel();
-        this.empleado = reservaEntity.getEmpleado();
+        //this.empleado = reservaEntity.getEmpleado();
         this.cliente = reservaEntity.getCliente();
         this.tipo_pago = reservaEntity.getTipo_pago();
 
@@ -51,7 +51,7 @@ public class ReservaDTO {
         reserva.setFechaSalida(this.fechaSalida);
         reserva.setValor_reserva(this.valor_reserva);
         reserva.setHotel(this.hotel);
-        reserva.setEmpleado(this.empleado);
+        //reserva.setEmpleado(this.empleado);
         reserva.setCliente(this.cliente);
         reserva.setTipo_pago(this.tipo_pago);
 
@@ -106,13 +106,13 @@ public class ReservaDTO {
         this.hotel = hotel;
     }
 
-    public EmpleadoEntity getEmpleado() {
+    /*public EmpleadoEntity getEmpleado() {
         return empleado;
     }
 
     public void setEmpleado(EmpleadoEntity empleado) {
         this.empleado = empleado;
-    }
+    }*/
 
     public ClienteEntity getCliente() {
         return cliente;

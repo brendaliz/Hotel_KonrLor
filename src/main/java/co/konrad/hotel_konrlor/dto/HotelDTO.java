@@ -7,6 +7,7 @@ package co.konrad.hotel_konrlor.dto;
 
 import co.konrad.hotel_konrlor.entities.CadenaHoteleraEntity;
 import co.konrad.hotel_konrlor.entities.HotelEntity;
+import co.konrad.hotel_konrlor.entities.UsuarioEntity;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +37,7 @@ public class HotelDTO {
     
     private CadenaHoteleraEntity cadenaHotelera;
     
+    private UsuarioEntity usuario;
     
     public HotelDTO() {
     }
@@ -51,6 +53,7 @@ public class HotelDTO {
         this.pais = hotelEntity.getPais();
         this.disponibilidad = hotelEntity.getDisponibilidad();
         this.cadenaHotelera = hotelEntity.getCadenaHotelera();
+        this.usuario = hotelEntity.getUsuario();
     }
     
     public HotelEntity toEntity(){
@@ -65,6 +68,7 @@ public class HotelDTO {
         hotel.setPais(this.pais);
         hotel.setDisponibilidad(this.disponibilidad);
         hotel.setCadenaHotelera(this.cadenaHotelera);
+        hotel.setUsuario(this.usuario);
         return hotel;
     }
 
@@ -153,6 +157,14 @@ public class HotelDTO {
 
     public void setCadenaHotelera(CadenaHoteleraEntity cadenaHotelera) {
         this.cadenaHotelera = cadenaHotelera;
+    }
+
+    public UsuarioEntity getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
     }
     
     

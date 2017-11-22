@@ -35,9 +35,9 @@ public class EmpleadoEntity implements Serializable{
     private String apellido;
     
     
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn (name = "id_usuario")
-    private UsuarioEntity usuario;
+    private UsuarioEntity usuario;*/
     
     @ManyToOne
     @JoinColumn (name = "id_cadena_hotelera")
@@ -65,14 +65,6 @@ public class EmpleadoEntity implements Serializable{
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
-    }
-
-    public UsuarioEntity getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(UsuarioEntity usuario) {
-        this.usuario = usuario;
     }
 
     public CadenaHoteleraEntity getCadena_hotelera() {

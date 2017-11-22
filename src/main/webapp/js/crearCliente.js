@@ -75,7 +75,7 @@
             var apellido = $('#apellido').val();
             var documento = $('#documento').val(/*nombre que le dimos en DTO*/);
             var direccion = $('#direccion').val();
-            var fecha_Nacimiento = $('#fecha_Nacimiento').val();
+            var fecha_Nacimiento = $('#fecha_Nacimiento').val().toLocaleString();
             var pais = $('#pais').val();
             var ciudad = $('#ciudad').val();
             var telefono = $('#telefono').val();

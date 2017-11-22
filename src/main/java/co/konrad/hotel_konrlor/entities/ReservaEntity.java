@@ -45,9 +45,9 @@ public class ReservaEntity implements Serializable{
     @JoinColumn (name = "id_hotel")
     private HotelEntity hotel;
     
-    @ManyToOne
+    /*@ManyToOne
     @JoinColumn (name = "id_empleado")
-    private EmpleadoEntity empleado;
+    private EmpleadoEntity empleado;*/
     
     @ManyToOne
     @JoinColumn (name = "id_cliente")
@@ -89,13 +89,13 @@ public class ReservaEntity implements Serializable{
         this.valor_reserva = valor_reserva;
     }
 
-    public EmpleadoEntity getEmpleado() {
+    /*public EmpleadoEntity getEmpleado() {
         return empleado;
     }
 
     public void setEmpleado(EmpleadoEntity empleado) {
         this.empleado = empleado;
-    }
+    }*/
 
     public PagoEntity getTipo_pago() {
         return tipo_pago;

@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 /**
  *
  * @author Carlos
@@ -38,6 +39,10 @@ public class CadenaHoteleraEntity implements Serializable{
     
     @Column(name = "direccion_Atencion_Cliente")
     private String direccion_Atencion_Cliente;
+    
+    @OneToOne
+    @JoinColumn (name = "usuario")
+    private UsuarioEntity usuario;
 
     public long getId_cadena_hotelera() {
         return id_cadena_hotelera;
@@ -77,6 +82,14 @@ public class CadenaHoteleraEntity implements Serializable{
 
     public void setDireccion_Atencion_Cliente(String direccion_Atencion_Cliente) {
         this.direccion_Atencion_Cliente = direccion_Atencion_Cliente;
+    }
+
+    public UsuarioEntity getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
     }
 
 }

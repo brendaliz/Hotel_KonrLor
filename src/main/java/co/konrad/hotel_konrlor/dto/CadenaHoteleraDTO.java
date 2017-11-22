@@ -6,6 +6,7 @@
 package co.konrad.hotel_konrlor.dto;
 
 import co.konrad.hotel_konrlor.entities.CadenaHoteleraEntity;
+import co.konrad.hotel_konrlor.entities.UsuarioEntity;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,6 +25,8 @@ public class CadenaHoteleraDTO {
     private String correo_Electronico;
     
     private String direccion_Atencion_Cliente;
+    
+    private UsuarioEntity usuario;
 
     public CadenaHoteleraDTO() {
     }
@@ -34,6 +37,7 @@ public class CadenaHoteleraDTO {
         this.numero_Telefono = cadenaHoteleraEntity.getNumero_Telefono();
         this.correo_Electronico = cadenaHoteleraEntity.getCorreo_Electronico();
         this.direccion_Atencion_Cliente = cadenaHoteleraEntity.getDireccion_Atencion_Cliente();
+        this.usuario = cadenaHoteleraEntity.getUsuario();
     }
     
     public CadenaHoteleraEntity toEntity(){
@@ -43,6 +47,7 @@ public class CadenaHoteleraDTO {
         cadenaHotelera.setNumero_Telefono(this.numero_Telefono);
         cadenaHotelera.setCorreo_Electronico(this.correo_Electronico);
         cadenaHotelera.setDireccion_Atencion_Cliente(this.direccion_Atencion_Cliente);
+        cadenaHotelera.setUsuario(this.usuario);
         return cadenaHotelera;
     }
     
@@ -92,6 +97,14 @@ public class CadenaHoteleraDTO {
 
     public void setDireccion_Atencion_Cliente(String direccion_Atencion_Cliente) {
         this.direccion_Atencion_Cliente = direccion_Atencion_Cliente;
+    }
+
+    public UsuarioEntity getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
     }
     
     

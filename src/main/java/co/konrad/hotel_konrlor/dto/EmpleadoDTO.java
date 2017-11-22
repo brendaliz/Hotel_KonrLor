@@ -23,8 +23,6 @@ public class EmpleadoDTO {
     
     private String apellido;
     
-    private UsuarioEntity usuario;
-    
     private CadenaHoteleraEntity cadena_hotelera;
     
     public EmpleadoDTO() {
@@ -34,7 +32,6 @@ public class EmpleadoDTO {
         this.id_empleado = empleadoEntity.getId_empleado();
         this.nombre = empleadoEntity.getNombre();
         this.apellido = empleadoEntity.getApellido();
-        this.usuario = empleadoEntity.getUsuario();
         this.cadena_hotelera = empleadoEntity.getCadena_hotelera();
     }
     
@@ -43,7 +40,6 @@ public class EmpleadoDTO {
         empleado.setId_empleado(this.id_empleado);
         empleado.setNombre(this.nombre);
         empleado.setApellido(this.apellido);
-        empleado.setUsuario(this.usuario);
         empleado.setCadena_hotelera(this.cadena_hotelera);
         return empleado;
     }
@@ -78,14 +74,6 @@ public class EmpleadoDTO {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
-    }
-
-    public UsuarioEntity getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(UsuarioEntity usuario) {
-        this.usuario = usuario;
     }
 
     public CadenaHoteleraEntity getCadena_hotelera() {

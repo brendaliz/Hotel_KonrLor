@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 /**
  *
  * @author Carlos
@@ -55,6 +56,10 @@ public class HotelEntity implements Serializable{
     @ManyToOne(optional=true)
     @JoinColumn(name = "id_cadena_Hotelera")
     private CadenaHoteleraEntity cadenaHotelera;
+    
+    @OneToOne
+    @JoinColumn (name = "usuario")
+    private UsuarioEntity usuario;
 
     public long getId_hotel() {
         return id_hotel;
@@ -134,6 +139,14 @@ public class HotelEntity implements Serializable{
 
     public void setCadenaHotelera(CadenaHoteleraEntity cadenaHotelera) {
         this.cadenaHotelera = cadenaHotelera;
+    }
+
+    public UsuarioEntity getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(UsuarioEntity usuario) {
+        this.usuario = usuario;
     }
 
     
