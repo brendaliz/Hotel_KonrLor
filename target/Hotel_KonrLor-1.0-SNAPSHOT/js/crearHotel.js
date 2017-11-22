@@ -33,7 +33,7 @@
             var disponibilidad = $('#disponibilidad').val(data.disponiblidad);
             var id = $('#id_hotel').val(data.id_hotel);
             
-            $('#crearBoton').text('Actualizar Usuario').click(function(event){
+            $('#crearHotBoton').text('Actualizar Usuario').click(function(event){
             var nombre = $('#nombre').val();
             var tipo = $('#tipo').val();
             var categoria = $('#categoria').val(/*nombre que le dimos en DTO*/);
@@ -73,7 +73,7 @@
         });
     }else{
         //Codigo crear
-        $('#crearBoton').click(function (event) {
+        $('#crearHotBoton').click(function (event) {
             console.log('Paparapa');
             var nombre = $('#nombre').val();
             var tipo = $('#tipo_hotel').val();

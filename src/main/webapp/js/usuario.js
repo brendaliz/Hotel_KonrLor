@@ -11,8 +11,8 @@
                               
                var tableRow = $('<tr>');
                //Crear una variable por cada division/columna de la tabla
-               var nombreUsuario = $('<td>');
-               nombreUsuario.text(data[i].nombre);
+               var nombre_usuario = $('<td>');
+               nombre_usuario.text(data[i].nombre_usuario);
                var password = $('<td>');
                password.text(data[i].password);
                var correo = $('<td>');
@@ -31,7 +31,7 @@
                acciones.append(botonEliminar);
                
                //Agregar las columnas a la fila
-               tableRow.append(nombreUsuario);
+               tableRow.append(nombre_usuario);
                tableRow.append(password);
                tableRow.append(correo);
                tableRow.append(acciones); 

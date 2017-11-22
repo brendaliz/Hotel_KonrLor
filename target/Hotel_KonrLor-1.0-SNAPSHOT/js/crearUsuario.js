@@ -23,20 +23,20 @@
             contentType: 'application/json',
             dataType:'json'
         }).done(function(data){
-            var nombre = $('#nombre').val(data.nombre);
+            var nombre_usuario = $('#nombre_usuario').val(data.nombre_usuario);
             var password = $('#password').val(data.password);
             var correo = $('#correo').val(data.correo/*nombre que le dimos en DTO*/);
             var id= data.id;
             
             $('#crearBoton').text('Actualizar Usuario').click(function(event){
-            var nombre = $('#nombre').val();
+            var nombre_usuario = $('#nombre_usuario').val();
             var password = $('#password').val();
             var correo = $('#correo').val(/*nombre que le dimos en DTO*/);
             $.ajax({
                url: '/Hotel_KonrLor/api/Usuarios/'+id,
                method:'PUT',
                data: JSON.stringify({
-                   nombre: nombre,
+                   nombre_usuario: nombre_usuario,
                     password: password,
                     correo: correo,
                     id:id
@@ -55,7 +55,7 @@
     }else{
         //Codigo crear
         $('#crearBoton').click(function (event) {
-            var nombre = $('#nombre').val();
+            var nombre_usuario = $('#nombre_usuario').val();
             var password = $('#password').val();
             var correo = $('#correo').val();
 
@@ -63,20 +63,20 @@
                 url: '/Hotel_KonrLor/api/Usuarios',
                 method: 'POST',
                 data: JSON.stringify({
-                    nombre: nombre,
+                    nombre_usuario: nombre_usuario,
                     password: password,
                     correo: correo
                 }),
                 contentType: 'application/json',
                 dataType: 'json'
             }).done(function (data) {
-                window.location.href = '/Hotel_KonrLor/clienteCreate.html';
+                //window.location.href = '/Hotel_KonrLor/clienteCreate.html';
             }).fail(function (xhr, status, error) {
                 console.log(error);
             });
         });
         $('#crearCadBoton').click(function (event) {
-            var nombre = $('#nombre').val();
+            var nombre_usuario = $('#nombre_usuario').val();
             var password = $('#password').val();
             var correo = $('#correo').val();
 
@@ -84,20 +84,20 @@
                 url: '/Hotel_KonrLor/api/Usuarios',
                 method: 'POST',
                 data: JSON.stringify({
-                    nombre: nombre,
+                    nombre_usuario: nombre_usuario,
                     password: password,
                     correo: correo
                 }),
                 contentType: 'application/json',
                 dataType: 'json'
             }).done(function (data) {
-                window.location.href = '/Hotel_KonrLor/cadenaHotCreate.html';
+                //window.location.href = '/Hotel_KonrLor/clienteCreate.html';
             }).fail(function (xhr, status, error) {
                 console.log(error);
             });
         });
         $('#crearHotBoton').click(function (event) {
-            var nombre = $('#nombre').val();
+            var nombre_usuario = $('#nombre_usuario').val();
             var password = $('#password').val();
             var correo = $('#correo').val();
 
@@ -105,18 +105,17 @@
                 url: '/Hotel_KonrLor/api/Usuarios',
                 method: 'POST',
                 data: JSON.stringify({
-                    nombre: nombre,
+                    nombre_usuario: nombre_usuario,
                     password: password,
                     correo: correo
                 }),
                 contentType: 'application/json',
                 dataType: 'json'
             }).done(function (data) {
-                window.location.href = '/Hotel_KonrLor/hotelCreate.html';
+                //window.location.href = '/Hotel_KonrLor/clienteCreate.html';
             }).fail(function (xhr, status, error) {
                 console.log(error);
             });
         });        
     }
 })(jQuery);
-

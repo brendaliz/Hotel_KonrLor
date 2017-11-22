@@ -26,7 +26,7 @@
             var correo_Electronico = $('#correo_Electronico').val(data.correo_Electronico);
             var direccion_Atencion_Cliente = $('#direccion_Atencion_Cliente').val(data.direccion_Atencion_Cliente);
             var id_cadena_hotelera= $('$id_cadena_hotelera').val(data.id_cadena_hotelera);
-            $('#crearBoton').text('Actualizar Usuario').click(function(event){
+            $('#crearCadBoton').text('Actualizar Usuario').click(function(event){
             var nombre_Cadena = $('#nombre_Cadena').val();
             var numero_Telefono = $('#numero_Telefono').val();
             var correo_Electronico = $('#correo_Electronico').val();
@@ -56,7 +56,7 @@
     }else{
         //Codigo crear
         console.log('Hola');
-        $('#crearBoton').click(function (event) {
+        $('#crearCadBoton').click(function (event) {
             var nombre_Cadena = $('#nombre_Cadena').val();
             var numero_Telefono = $('#numero_Telefono').val();
             var correo_Electronico = $('#correo_Electronico').val(/*nombre que le dimos en DTO*/);
