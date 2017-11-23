@@ -11,4 +11,28 @@ $(document).ready(function(event) {
            div.hide(); 
         });
     });
+    $.ajax('./modalLogin.html').success(function(response){
+        console.log(response);
+        var div = $(response);
+        div.hide();
+        $('body').append(div);
+        $('#loginb').click(function(){
+           div.show(); 
+        });
+        $('#cancelar', div).click(function(){
+           div.hide(); 
+        });
+    });    
+    $.ajax('./modalLogin.html').success(function(response){
+        console.log(response);
+        var div = $(response);
+        div.hide();
+        $('body').append(div);
+        $('#loginc').click(function(){
+           div.show(); 
+        });
+        /*$('#cancelar', div).click(function(){
+           div.hide(); 
+        });*/
+    });    
 });

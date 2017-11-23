@@ -40,9 +40,21 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./quienesSomos.html">Quienes somos</a>
                     </li>
-                    <li class="nav-item entrar">
-                        <a href="javascript:void(0)" class="nav-link" id="login">Entrar</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                            Entrar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a href="javascript:void(0)" class="dropdown-item" id="login">Login para clientes</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a href="javascript:void(0)" class="dropdown-item" id="loginb">Login para hoteles (independientes)</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a href="javascript:void(0)" class="dropdown-item" id="loginc">Login para cadenas hoteleras</a></li>                            
+                        </ul>
                     </li>
+                    <!--<li class="nav-item entrar">
+                        <a href="javascript:void(0)" class="nav-link" id="login">Entrar</a>
+                    </li>-->
                     <li class="nav-item registro">
                         <a href="./registro.html" class="nav-link">Registrarse</a>
                     </li>
