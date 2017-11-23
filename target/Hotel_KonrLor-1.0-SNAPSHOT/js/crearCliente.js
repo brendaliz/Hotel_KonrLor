@@ -75,12 +75,17 @@
             var apellido = $('#apellido').val();
             var documento = $('#documento').val(/*nombre que le dimos en DTO*/);
             var direccion = $('#direccion').val();
-            var fecha_Nacimiento = $('#fecha_Nacimiento').val().toLocaleString();
+            //var fecha_Nacimiento = $('#fecha_Nacimiento').val().toLocaleString();
             var pais = $('#pais').val();
             var ciudad = $('#ciudad').val();
             var telefono = $('#telefono').val();
             var celular = $('#celular').val();
+            var fecha_Nacimiento = new Date($('#fecha_Nacimiento').val());
+            
+            //var usuario = data.id_usuario;
+            //var usuario = event.data.id_usuario.valueOf();
             console.log('Pepe');
+            
             $.ajax({
                 url: '/Hotel_KonrLor/api/clientes',
                 method: 'POST',
@@ -94,6 +99,7 @@
                     ciudad: ciudad,
                     telefono: telefono,
                     celular: celular
+                    //usuario : usuario
                 }),
                 contentType: 'application/json',
                 dataType: 'json'
