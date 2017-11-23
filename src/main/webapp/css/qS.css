@@ -118,3 +118,84 @@ ol li a{color:#fff;}
   font-family: cursive;
   font-size: 1.5em;
 }
+
+/*imagenes*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,300); 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 3em;
+  font-family: oxygen;
+  line-height: 1.4;
+}
+
+.pull-left {
+  margin-left: 1em;
+  float: left;
+  height: 250px;
+  width: 250px;
+  text-align: center;
+}
+
+.pull-left:first-child {
+  margin-left: 0;
+}
+
+.hover-box {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-image: url('http://cdn.clubtravel.ie/macrosites/fairmont%20kea%20lani3193_201411261158538541.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  border-radius: 5px;
+}
+
+.hover-box span,
+.hover-box p {
+  display: block;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  padding: 1em;
+  width: 100%;
+  height: 100%;
+  background: rgba(50,20,120,.7);
+  font-size: 2rem;  
+  letter-spacing: -.05rem;
+  color: #fff;
+  text-align: center;
+  transition: 
+    right .5s ease,
+    opacity .5s ease,
+    left .5s ease;
+  opacity: 0;
+}
+
+.hover-box p {
+  left: 0;
+  opacity: 1;
+  background: rgba(0,0,0,.3);
+}
+
+.hover-box:hover span {
+  right: 0;
+  opacity: 1;
+}
+
+.hover-box:hover p {
+  opacity: 0;
+  left: 100%; 
+}
+
+.description {
+  display: block;
+  padding: 10px;
+}

@@ -19,3 +19,16 @@ $(document).ready(function(){
      $('#posterBoard').append('<p>' + popText(posterTitle) +'</p>');
       
     }); });
+
+
+jQuery(function($) {
+  
+  $('.js-hover-box').each(function(){
+    
+    var desc = $(this).data('info')  ;
+  
+    $(this).append('<p>KonLor</p><span>' + desc + '</span>');
+  
+  });
+  
+});
