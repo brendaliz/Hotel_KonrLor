@@ -11,7 +11,7 @@ $(document).ready(function(event) {
            div.hide(); 
         });
     });
-    $.ajax('./modalLogin.html').success(function(response){
+    $.ajax('./modalHotLogin.html').success(function(response){
         console.log(response);
         var div = $(response);
         div.hide();
@@ -23,7 +23,7 @@ $(document).ready(function(event) {
            div.hide(); 
         });
     });    
-    $.ajax('./modalLogin.html').success(function(response){
+    $.ajax('./modalCadLogin.html').success(function(response){
         console.log(response);
         var div = $(response);
         div.hide();
