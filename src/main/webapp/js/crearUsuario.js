@@ -70,7 +70,7 @@
                 contentType: 'application/json',
                 dataType: 'json'
             }).done(function (data) {
-                //window.location.href = '/Hotel_KonrLor/clienteCreate.html';
+                window.location.href = '/Hotel_KonrLor/clienteCreate.html';
             }).fail(function (xhr, status, error) {
                 console.log(error);
             });
@@ -91,7 +91,7 @@
                 contentType: 'application/json',
                 dataType: 'json'
             }).done(function (data) {
-                //window.location.href = '/Hotel_KonrLor/clienteCreate.html';
+                window.location.href = '/Hotel_KonrLor/clienteCreate.html';
             }).fail(function (xhr, status, error) {
                 console.log(error);
             });
@@ -112,7 +112,7 @@
                 contentType: 'application/json',
                 dataType: 'json'
             }).done(function (data) {
-                //window.location.href = '/Hotel_KonrLor/clienteCreate.html';
+                window.location.href = '/Hotel_KonrLor/clienteCreate.html';
             }).fail(function (xhr, status, error) {
                 console.log(error);
             });

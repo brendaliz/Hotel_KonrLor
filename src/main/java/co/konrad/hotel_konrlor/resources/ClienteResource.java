@@ -6,7 +6,9 @@
 package co.konrad.hotel_konrlor.resources;
 
 import co.konrad.hotel_konrlor.dto.ClienteDTO;
+import co.konrad.hotel_konrlor.dto.UsuarioDTO;
 import co.konrad.hotel_konrlor.entities.ClienteEntity;
+import co.konrad.hotel_konrlor.entities.UsuarioEntity;
 import co.konrad.hotel_konrlor.logic.ClienteLogic;
 import java.util.List;
 import javax.ejb.EJB;
@@ -41,6 +43,15 @@ public class ClienteResource {
         List<ClienteEntity> clientes = clienteLogic.getClientes();
         return ClienteDTO.toClienteList(clientes);
     }
+    
+/*    @GET
+    public UsuarioDTO getUsuario(String nombre_usuario, String password){
+        UsuarioEntity cliente = clienteLogic.getUser(nombre_usuario,password);
+        if(cliente == null){
+            throw new RuntimeException("El usuario no existe");
+        }
+        return new UsuarioDTO(cliente);
+    }*/
 
     /**
      * Metodo GET para obtener un solo objeto

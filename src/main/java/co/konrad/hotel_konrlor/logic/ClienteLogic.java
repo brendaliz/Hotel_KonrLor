@@ -6,6 +6,7 @@
 package co.konrad.hotel_konrlor.logic;
 
 import co.konrad.hotel_konrlor.entities.ClienteEntity;
+import co.konrad.hotel_konrlor.entities.UsuarioEntity;
 import co.konrad.hotel_konrlor.persistences.ClientePersistence;
 import java.util.List;
 import javax.ejb.Stateless;
@@ -55,4 +56,9 @@ public class ClienteLogic {
     public void deleteCliente (Long id_cliente){
         clientePersistence.delete(id_cliente);
     }
+
+    /*public UsuarioEntity getUser(String nombre_usuario, String password) {
+        UsuarioEntity usuario = clientePersistence.findUser(nombre_usuario, password);
+        return usuario;
+    }*/
 }

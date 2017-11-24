@@ -6,6 +6,7 @@
 package co.konrad.hotel_konrlor.persistences;
 
 import co.konrad.hotel_konrlor.entities.ClienteEntity;
+import co.konrad.hotel_konrlor.entities.UsuarioEntity;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -31,6 +32,20 @@ import javax.persistence.Query;
         Query q = emCliente.createQuery("select c from ClienteEntity c");
         return q.getResultList();
     }
+    
+/*    public UsuarioEntity findUser(String id_usuario,String password){
+        Query q = emCliente.createQuery("select * from UsuarioEntity where nombre_usuario = :nombre_usuario and password = :password",UsuarioEntity.class);
+        q.setParameter("id_usuario", id_usuario);
+        q.setParameter("nombre_usuario", password);
+        //try{ 
+            UsuarioEntity c = (UsuarioEntity) q.getSingleResult();
+        //    return true;
+        //}catch(javax.persistence.NoResultException e)
+        //{
+        //    return false;
+        //}
+        return c;
+    }*/
     
     public ClienteEntity create(ClienteEntity cliente) {
         emCliente.persist(cliente);
