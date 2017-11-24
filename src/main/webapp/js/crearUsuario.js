@@ -95,7 +95,7 @@
                 contentType: 'application/json',
                 dataType: 'json'
             }).done(function (data) {
-                window.location.href = '/Hotel_KonrLor/clienteCreate.html';
+                window.location.href = '/Hotel_KonrLor/cadenaHotCreate.html';
                 id_usuario =data.id;
             }).fail(function (xhr, status, error) {
                 console.log(error);
@@ -117,7 +117,7 @@
                 contentType: 'application/json',
                 dataType: 'json'
             }).done(function (data) {
-                window.location.href = '/Hotel_KonrLor/clienteCreate.html';
+                window.location.href = '/Hotel_KonrLor/hotelCreate.html';
             }).fail(function (xhr, status, error) {
                 console.log(error);
             });
@@ -125,18 +125,6 @@
 
         //Codigo crear cliente
         $('#crearCliBoton').click(function (event) {
-            var id_usuario;
-            $.ajax({
-                    url:'/Hotel_KonrLor/api/Usuarios',
-                    method:'GET',
-                    contentType: 'application/json',
-                    dataType: 'json'
-                }).done(function (data){
-                    var num= data.length-1;
-                    console.log(num);
-                    idUsuario=data[num].id_usuario;
-                    console.log(idUsuario);
-                });
             var nombre = $('#nombre').val();
             var apellido = $('#apellido').val();
             var documento = $('#documento').val(/*nombre que le dimos en DTO*/);
@@ -147,11 +135,8 @@
             var telefono = $('#telefono').val();
             var celular = $('#celular').val();
             var fecha_Nacimiento = new Date($('#fecha_Nacimiento').val());
-            var usuario = idUsuario;
             //var usuario = data.id_usuario;
             //var usuario = event.data.id_usuario.valueOf();
-            console.log('Pepe');
-            console.log('3.'+usuario);
             $.ajax({
                 url: '/Hotel_KonrLor/api/clientes',
                 method: 'POST',
@@ -164,8 +149,9 @@
                     pais: pais,
                     ciudad: ciudad,
                     telefono: telefono,
-                    celular: celular,
-                    usuario : usuario
+                    celular: celular
+                   // idUsuario: {idUsuario: id}
+
                 }),
                 contentType: 'application/json',
                 dataType: 'json'
@@ -174,6 +160,68 @@
             }).fail(function (xhr, status, error) {
                 console.log(error);
             });
-        });        
+        }); 
+        
+                //Codigo crear
+        $('#crearHot').click(function (event) {
+            console.log('Paparapa');
+            var nombre = $('#nombre').val();
+            var tipo = $('#tipo_hotel').val();
+            var categoria = $('#categoria').val(/*nombre que le dimos en DTO*/);
+            var num_Telefono = $('#num_Telefono').val();
+            var direccion = $('#direccion').val();
+            var ciudad = $('#ciudad').val();
+            var pais = $('#pais').val();
+            var disponibilidad = $('#disponibilidad').val();
+            var id_hotel = $('#id_hotel').val();
+
+            $.ajax({
+                url: '/Hotel_KonrLor/api/hoteles',
+                method: 'POST',
+                data: JSON.stringify({
+                    nombre: nombre,
+                    tipo: tipo,
+                    categoria: categoria,
+                    num_Telefono: num_Telefono,
+                    direccion: direccion,
+                    ciudad: ciudad,
+                    pais: pais,
+                    disponibilidad: disponibilidad,
+                    id_hotel: id_hotel
+                }),
+                contentType: 'application/json',
+                dataType: 'json'
+            }).done(function (data) {
+                window.location.href = '/Hotel_KonrLor';
+            }).fail(function (xhr, status, error) {
+                console.log(error);
+            });
+        });
+        
+            $('#crearCad').click(function (event) {
+            var nombre_Cadena = $('#nombre_Cadena').val();
+            var numero_Telefono = $('#numero_Telefono').val();
+            var correo_Electronico = $('#correo_Electronico').val(/*nombre que le dimos en DTO*/);
+            var direccion_Atencion_Cliente = $('#direccion_Atencion_Cliente').val();
+            var id_cadena_hotelera = $('#id_cadena_hotelera').val();
+
+            $.ajax({
+                url: '/Hotel_KonrLor/api/cadenasHoteleras',
+                method: 'POST',
+                data: JSON.stringify({
+                   nombre_Cadena: nombre_Cadena,
+                    numero_Telefono: numero_Telefono,
+                    correo_Electronico: correo_Electronico,
+                    direccion_Atencion_Cliente: direccion_Atencion_Cliente,
+                    id_cadena_hotelera:id_cadena_hotelera
+                }),
+                contentType: 'application/json',
+                dataType: 'json'
+            }).done(function (data) {
+                window.location.href = '/Hotel_KonrLor';
+            }).fail(function (xhr, status, error) {
+                console.log(error);
+            });
+        });
     }
 })(jQuery);
