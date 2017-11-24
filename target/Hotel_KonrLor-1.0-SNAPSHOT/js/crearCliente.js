@@ -69,8 +69,8 @@
             console.log(error);
         });
     }else{
-        //Codigo crear
-        $('#crearBoton').click(function (event) {
+        //Codigo crear usuario
+        $('#crearCliBoton').click(function (event) {
             var nombre = $('#nombre').val();
             var apellido = $('#apellido').val();
             var documento = $('#documento').val(/*nombre que le dimos en DTO*/);
