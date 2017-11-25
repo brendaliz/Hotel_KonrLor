@@ -32,13 +32,14 @@ public class ReservaEntity implements Serializable{
     private Long id_reserva;
     
     @Temporal(TemporalType.DATE)
-    @Column(name = "fecha_entrada")
+    @Column(name = "fechaEntrada")
     private Date fechaEntrada;
     
     @Temporal(TemporalType.DATE)
-    @Column(name = "fecha_salida")
+    @Column(name = "fechaSalida")
     private Date fechaSalida;
     
+    @Column(name = "valor_reserva")
     private int valor_reserva;
     
     @ManyToOne

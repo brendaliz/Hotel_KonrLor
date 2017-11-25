@@ -3,8 +3,8 @@
         <title>Hotel_KonrLor</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/pulse/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/signIn.css">
-        <link rel="stylesheet" href="./css/reserva.css">
+        <!--<link rel="stylesheet" href="./css/signIn.css">
+        <link rel="stylesheet" href="./css/reserva.css">-->
         <link rel="icon" type="image/png" href="./img/iconoK.png" />
         <script src="./js/vendor/jquery-2.2.4.min.js"></script>
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -26,43 +26,36 @@
                 </ul>
             </div>
         </nav>
-
-        <div class="content">
-            <h1><a>Reserva</a></h1>
-        </div>
-
-        <div id="contenedor">
-  <div class="titulo">Reserva del hotel </div>
-  <form action="send.php" method="post" name="registro" accept-charset="UTF-8">
-    <div id="formulario1">
-
-      <input name="Nombre" type="text" required placeholder="Nombre" checked/>
-
-      <input name="Apellidos" type="text" required placeholder="Apellido" checked/>
-
-      <input name="Correo" type="text" required placeholder="E-mail" />
-
-      <input name="Movil" type="text" minlength="9" required placeholder="Telefono movil" />
-
-    </div>
-    <div id="formulario2">
-      <div class="titulo">Datos de Cuenta</div>
-      <input name="nombre de usuario" type="text" pattern="[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*" placeholder="Nombre de Usuario" required />
-      <input name="pass1" type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$" placeholder="Contraseña" required/>
-      <input name="pass2" type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}$" placeholder="Verificar contraseña" required/>
-    </div>
-    <div id="formulario3">
-      <div class="titulo">Datos de Pago</div>
-   
-      
-      <input name="Tipo de Tarjeta" type="text" pattern="/^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/" placeholder="Tipo de Tarjeta" required/>
-      <input name="numero de tarjeta" type="text" pattern="/^4\d{3}-?\d{4}-?\d{4}-?\d{4}$/" placeholder="Numero de Tarjeta" required/>
-    </div>
-
-    <input type="submit" value="Terminar y Enviar" />
-  </form>
-
-</div>
+        <div>
+            <h1 align="center"> Datos de Reserva</h1>
+            <div align="center" class="form-group">
+                <label class="control-label"><b>Fecha entrada</b></label>
+                <input id= "fechaEntrada" class="form-control" type="date">
+            </div>
+            <div align="center" class="form-group">
+                <label class="control-label"><b>Fecha salida</b></label>
+                <input id= "fechaSalida" class="form-control" type="date">
+            </div>            
+            <div align="center" class="form-group">
+                <label class="control-label"><b>Valor reserva</b></label>
+                <input id= "valor_reserva" class="form-control" type="text" placeholder="Ingresar valor de reserva">
+            </div>
+            <div align="center" class="form-group">
+                <label class="control-label"><b>Hotel</b></label>
+                <input id= "hotel" class="form-control" type="text" placeholder="Ingresar valor de reserva">
+            </div>            
+            <div align="center" class="form-group">
+                <label class="control-label"><b>cliente</b></label>
+                <input id= "cliente" class="form-control" type="text" placeholder="Ingresar valor de reserva">
+            </div>            
+            <div align="center" class="form-group">
+                <label class="control-label"><b>tipo pago</b></label>
+                <input id= "tipo_pago" class="form-control" type="text" placeholder="Ingresar valor de reserva">
+            </div>            
+        </div>    
+            <div align="center">
+                <button class="btn btn-primary" id="crearRes">Siguiente</button>
+            </div>        
 <div id="informacion">
   <details>
     <summary>Terminos y Condiciones</summary>
@@ -83,7 +76,8 @@
       </ul>
     </aside>
   </details>
-</div>
+</div>        
+        <script src="./js/crearReserva.js"></script>        
     </body>
 
 </html>

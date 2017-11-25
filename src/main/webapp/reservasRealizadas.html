@@ -5,9 +5,9 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/style.css">
+        <!--<link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/signIn.css">
-        <link rel="stylesheet" href="./css/usuarios.css">
+        <link rel="stylesheet" href="./css/usuarios.css">-->
         <link rel="icon" type="image/png" href="./img/iconoK.png" />
         <script src="./js/vendor/jquery-2.2.4.js" type="text/javascript"></script>
         <script src="./js/vendor/usuariop.js" type="text/javascript"></script> 
@@ -24,12 +24,8 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">                 
                     <li class="nav-item">
-                        <a class="nav-link" href="./Hoteles.html">Hoteles</a>
-                    </li>
-              
-                    <li class="nav-item">
-                        <a class="nav-link" href="./quienesSomos.html">Quienes somos</a>
-                    </li>     
+                        <a class="nav-link" href="./indexCliente.html">Regresar</a>
+                    </li>   
 
                 </ul>
                 <ul class="navbar-nav ml-auto">                    
@@ -38,24 +34,32 @@
 
                     </li>
                     <li class="nav-item">
-                        <a href="./index.html" class="nav-link">Cerrar Sesion</a>
+                        <a href="./indexCliente.html" class="nav-link">Cerrar Sesion</a>
                     </li>
                 </ul>                
             </div>
         </nav>
-
-        <div id="cover" class="cover"></div>
-
-        <div id="open-content" class="open-content">
-            <a href="#" id="close-content" class="close-content"><span class="x-1"></span><span class="x-2"></span></a>
-            <img id="open-content-image" src="" />
-            <div class="text" id="open-content-text">
-            </div>
-        </div>
-
         
         <div class="content">
             <h1><a>Reservas realizadas</a></h1>
-        </div>       
+        </div>
+        
+        <div id="tFestivales">
+            <table class="table table-striped">
+                <thead>
+                <th>Fecha Entrada</th>
+                <th>Fecha Salida</th>
+                <th>Valor Reserva</th>
+                <th>Hotel</th>
+                <th>Cliente</th>
+                <th>Tipo_Pago</th>
+                <th>Acciones</th>
+                </thead>
+
+                <tbody> </tbody>
+            </table>
+        </div>
+        
+        <script src="./js/reserva.js"></script>
     </body>
 </html>

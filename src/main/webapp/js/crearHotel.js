@@ -31,9 +31,9 @@
             var ciudad = $('#ciudad').val(data.ciudad);
             var pais = $('#pais').val(data.pais);
             var disponibilidad = $('#disponibilidad').val(data.disponiblidad);
-            var id = $('#id_hotel').val(data.id_hotel);
+            var id = data.id_hotel;
             
-            $('#crearHotBoton').text('Actualizar Usuario').click(function(event){
+            $('#crearHot').text('Actualizar').click(function(event){
             var nombre = $('#nombre').val();
             var tipo = $('#tipo').val();
             var categoria = $('#categoria').val(/*nombre que le dimos en DTO*/);
@@ -42,9 +42,9 @@
             var ciudad = $('#ciudad').val();
             var pais = $('#pais').val();
             var disponibilidad = $('#disponibilidad').val();
-            var id = $('#id_hotel').val();
+            //var id = $('#id_hotel').val();
             var cadenaHotelera = $('#cadenaHotelera');
-            var id = $('#id_hotel').val();
+            //var id = $('#id_hotel').val();
             $.ajax({
                url: '/Hotel_KonrLor/api/hoteles/'+id,
                method:'PUT',
@@ -73,7 +73,7 @@
         });
     }else{
         //Codigo crear
-        $('#crearHotBoton').click(function (event) {
+        $('#crearHot').click(function (event) {
             console.log('Paparapa');
             var nombre = $('#nombre').val();
             var tipo = $('#tipo_hotel').val();

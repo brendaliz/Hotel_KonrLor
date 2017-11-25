@@ -38,7 +38,7 @@ public class HotelEntity implements Serializable{
     @Column(name="categoria_hotel")
     private String categoria;
     
-    @Column(name="num_Telefono_hotel")
+    @Column(name="num_Telefono")
     private int num_Telefono;
     
     @Column(name="direccion_hotel")
@@ -147,6 +147,10 @@ public class HotelEntity implements Serializable{
 
     public void setUsuario(UsuarioEntity usuario) {
         this.usuario = usuario;
+    }
+
+    public boolean isDisponibilidad() {
+        return disponibilidad;
     }
 
     

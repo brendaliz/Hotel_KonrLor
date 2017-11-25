@@ -18,7 +18,7 @@
                var categoria = $('<td>');
                categoria.text(data[i].categoria);
                var num_Telefono = $('<td>');
-               num_Telefono.text(data[i].numero_Telefono);
+               num_Telefono.text(data[i].num_Telefono);
                var direccion = $('<td>');
                direccion.text(data[i].direccion);
                var ciudad = $('<td>');
@@ -32,12 +32,12 @@
                var botonEliminar = $('<button>').addClass('btn btn-danger');
                //Se crea un atributo que realiza el transporte de datos
                //data-'cualquierNombre'
-               botonEliminar.text('Eliminar').attr('data-id', data[i].id);
-               var botonActualizar = $('<a href="/Hotel_KonrLor/usuarioCreate.html?id='+ data[i].id+'">').addClass('btn btn-primary');
-               botonActualizar.text('Actualizar');
+               botonEliminar.text('Eliminar').attr('data-id', data[i].id_hotel);
+               //var botonActualizar = $('<a href="/Hotel_KonrLor/clienteCreate.html?id='+ data[i].id+'">').addClass('btn btn-primary');
+               //botonActualizar.text('Actualizar');
                
                botonEliminar.click(eliminar);
-               acciones.append(botonActualizar);
+               //acciones.append(botonActualizar);
                acciones.append(botonEliminar);
                
                //Agregar las columnas a la fila
@@ -62,13 +62,13 @@
    }); 
    function eliminar(event){
        $.ajax({
-           url: '/Hotel_KonrLor/api/hoteles' +$(this).attr('data-id'),
+           url: '/Hotel_KonrLor/api/hoteles/' +$(this).attr('data-id'),
            method: 'DELETE',
            contentType: 'application/json',
            dataType: 'json'
        }).done(function(data){
            console.log('Elimino');
-           window.location.href = '/Hotel_KonrLor';
+           window.location.href = '/Hotel_KonrLor/indexHotel.html';
        }).fail(function(xhr,status,error){
            console.log(error);
        });

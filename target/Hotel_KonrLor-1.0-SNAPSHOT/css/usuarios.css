@@ -2,10 +2,9 @@
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 .snip1344 {
     font-family: 'Open Sans', Arial, sans-serif;
-  position: relative;
+  position: absolute;
   float: left;
   overflow: hidden;
-  margin: 10px 1%;
   margin: 0 42%;
   min-width: 230px;
   max-width: 315px;
