@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+
+
+body{
+	background: #ebebeb;
+	font-family: 'Quicksand';
+	font-weight:700;
+	font-size:14px;
+	color:#7d7d7d;
+	text-shadow:1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.container{
+	padding: 10px;
+	width:560px;
+	margin:0 auto;
+}
+
+nav.linkbar{
+	 background: #f9f9f9;
+	 box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+	 border-radius: 5px;
+	 margin: 10 auto;
+	 padding:6px 4px 0px 4px;
+	 text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+	 height:80px;
+	 width:100%;
+	 text-align: center;
+}
+
+nav ul{
+	  margin: 0 auto;
+	  padding: 0;
+	  list-style-type: none;
+	  text-align: center;
+}
+
+nav li {
+  	float: left;
+  	padding:10px 15px;
+}
+
+nav li a{
+  	color: #ccc;
+  	text-decoration: none;
+  	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+  	display: block;
+  	width:80px;
+  	font-weight: 400;
+}
+
+.fa{
+	font-size: 2em;
+  	display: inline-block;
+  	padding:4px 4px;
+}
+
+nav a:hover{
+  	color: #c0392b;
+}
+
+.ideas {
+	 background: #f9f9f9;
+	 box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+	 border-radius: 5px;
+	 margin: 15px auto;
+	 padding:4px;
+	 text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.1);
+	 width:100%;	
+}
+
+.destination{
+	background: #ebebeb;
+	margin: 10px;
+	padding:5px;
+	border-radius: 5px;
+	min-height: 215px;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.destimg{
+	-webkit-border-radius: 250px;
+	-moz-border-radius: 250px;
+	border-radius: 250px;
+	float:left;	
+	height:200px;
+	width:200px;
+	overflow:hidden;
+	display:inline-block;
+	margin: 10px;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.destimginner{
+	height:200px;
+}
+
+.textcont{
+height:170px;	
+}
+
+
+
+h1{
+	color:#c0392b;
+	font-family: Quicksand;
+	font-weight: 700;
+	text-align: center;
+	-webkit-margin-before: 0.3em;
+	-webkit-margin-after: 0.3em;	
+}
+
+h2{
+	-webkit-margin-before: 0.1em;
+	-webkit-margin-after: 0.1em;
+}
+
+h2 b{
+	color:#c0392b;	
+}
+
+span.ratings {
+	color:#E6C973;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	text-align: left;
+}
+
+.button{
+	background:#c0392b;
+	text-shadow: 1px 1px 1px #ab3326;
+	border-radius: 5px;
+	padding:0px 6px;
+	margin:0px 10px;
+	float:right;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover{
+	color:#fff;
+	background: #ab3326;
+}
+
+a{
+	text-decoration: none;
+	color:#ebebeb;
+	
+}
